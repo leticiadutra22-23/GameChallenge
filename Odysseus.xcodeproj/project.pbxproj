@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE04E22F29D1BB34001A7F62 /* OdysseusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */; };
+		EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E23029D1BB34001A7F62 /* ContentView.swift */; };
+		EE04E23329D1BB35001A7F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE04E23229D1BB35001A7F62 /* Assets.xcassets */; };
+		EE04E23629D1BB35001A7F62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE04E23529D1BB35001A7F62 /* Preview Assets.xcassets */; };
+		EE04E23829D1BB35001A7F62 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E23729D1BB35001A7F62 /* Persistence.swift */; };
+		EE04E23B29D1BB35001A7F62 /* Odysseus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE04E23929D1BB35001A7F62 /* Odysseus.xcdatamodeld */; };
+		EE04E24529D1BB35001A7F62 /* OdysseusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E24429D1BB35001A7F62 /* OdysseusTests.swift */; };
+		EE04E24F29D1BB35001A7F62 /* OdysseusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E24E29D1BB35001A7F62 /* OdysseusUITests.swift */; };
+		EE04E25129D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE04E24129D1BB35001A7F62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE04E22329D1BB34001A7F62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE04E22A29D1BB34001A7F62;
+			remoteInfo = Odysseus;
+		};
+		EE04E24B29D1BB35001A7F62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE04E22329D1BB34001A7F62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE04E22A29D1BB34001A7F62;
+			remoteInfo = Odysseus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE04E22B29D1BB34001A7F62 /* Odysseus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Odysseus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusApp.swift; sourceTree = "<group>"; };
+		EE04E23029D1BB34001A7F62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EE04E23229D1BB35001A7F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE04E23529D1BB35001A7F62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE04E23729D1BB35001A7F62 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EE04E23A29D1BB35001A7F62 /* Odysseus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Odysseus.xcdatamodel; sourceTree = "<group>"; };
+		EE04E24029D1BB35001A7F62 /* OdysseusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdysseusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE04E24429D1BB35001A7F62 /* OdysseusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusTests.swift; sourceTree = "<group>"; };
+		EE04E24A29D1BB35001A7F62 /* OdysseusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdysseusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE04E24E29D1BB35001A7F62 /* OdysseusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusUITests.swift; sourceTree = "<group>"; };
+		EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE04E22829D1BB34001A7F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE04E23D29D1BB35001A7F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE04E24729D1BB35001A7F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE04E22229D1BB34001A7F62 = {
+			isa = PBXGroup;
+			children = (
+				EE04E22D29D1BB34001A7F62 /* Odysseus */,
+				EE04E24329D1BB35001A7F62 /* OdysseusTests */,
+				EE04E24D29D1BB35001A7F62 /* OdysseusUITests */,
+				EE04E22C29D1BB34001A7F62 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE04E22C29D1BB34001A7F62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE04E22B29D1BB34001A7F62 /* Odysseus.app */,
+				EE04E24029D1BB35001A7F62 /* OdysseusTests.xctest */,
+				EE04E24A29D1BB35001A7F62 /* OdysseusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
+			isa = PBXGroup;
+			children = (
+				EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */,
+				EE04E23029D1BB34001A7F62 /* ContentView.swift */,
+				EE04E23229D1BB35001A7F62 /* Assets.xcassets */,
+				EE04E23729D1BB35001A7F62 /* Persistence.swift */,
+				EE04E23929D1BB35001A7F62 /* Odysseus.xcdatamodeld */,
+				EE04E23429D1BB35001A7F62 /* Preview Content */,
+			);
+			path = Odysseus;
+			sourceTree = "<group>";
+		};
+		EE04E23429D1BB35001A7F62 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EE04E23529D1BB35001A7F62 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE04E24329D1BB35001A7F62 /* OdysseusTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE04E24429D1BB35001A7F62 /* OdysseusTests.swift */,
+			);
+			path = OdysseusTests;
+			sourceTree = "<group>";
+		};
+		EE04E24D29D1BB35001A7F62 /* OdysseusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE04E24E29D1BB35001A7F62 /* OdysseusUITests.swift */,
+				EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */,
+			);
+			path = OdysseusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE04E22A29D1BB34001A7F62 /* Odysseus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE04E25429D1BB35001A7F62 /* Build configuration list for PBXNativeTarget "Odysseus" */;
+			buildPhases = (
+				EE04E22729D1BB34001A7F62 /* Sources */,
+				EE04E22829D1BB34001A7F62 /* Frameworks */,
+				EE04E22929D1BB34001A7F62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Odysseus;
+			productName = Odysseus;
+			productReference = EE04E22B29D1BB34001A7F62 /* Odysseus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE04E23F29D1BB35001A7F62 /* OdysseusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE04E25729D1BB35001A7F62 /* Build configuration list for PBXNativeTarget "OdysseusTests" */;
+			buildPhases = (
+				EE04E23C29D1BB35001A7F62 /* Sources */,
+				EE04E23D29D1BB35001A7F62 /* Frameworks */,
+				EE04E23E29D1BB35001A7F62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE04E24229D1BB35001A7F62 /* PBXTargetDependency */,
+			);
+			name = OdysseusTests;
+			productName = OdysseusTests;
+			productReference = EE04E24029D1BB35001A7F62 /* OdysseusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE04E24929D1BB35001A7F62 /* OdysseusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE04E25A29D1BB35001A7F62 /* Build configuration list for PBXNativeTarget "OdysseusUITests" */;
+			buildPhases = (
+				EE04E24629D1BB35001A7F62 /* Sources */,
+				EE04E24729D1BB35001A7F62 /* Frameworks */,
+				EE04E24829D1BB35001A7F62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE04E24C29D1BB35001A7F62 /* PBXTargetDependency */,
+			);
+			name = OdysseusUITests;
+			productName = OdysseusUITests;
+			productReference = EE04E24A29D1BB35001A7F62 /* OdysseusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE04E22329D1BB34001A7F62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EE04E22A29D1BB34001A7F62 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EE04E23F29D1BB35001A7F62 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EE04E22A29D1BB34001A7F62;
+					};
+					EE04E24929D1BB35001A7F62 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EE04E22A29D1BB34001A7F62;
+					};
+				};
+			};
+			buildConfigurationList = EE04E22629D1BB34001A7F62 /* Build configuration list for PBXProject "Odysseus" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE04E22229D1BB34001A7F62;
+			productRefGroup = EE04E22C29D1BB34001A7F62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE04E22A29D1BB34001A7F62 /* Odysseus */,
+				EE04E23F29D1BB35001A7F62 /* OdysseusTests */,
+				EE04E24929D1BB35001A7F62 /* OdysseusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE04E22929D1BB34001A7F62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE04E23629D1BB35001A7F62 /* Preview Assets.xcassets in Resources */,
+				EE04E23329D1BB35001A7F62 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE04E23E29D1BB35001A7F62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE04E24829D1BB35001A7F62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE04E22729D1BB34001A7F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE04E23B29D1BB35001A7F62 /* Odysseus.xcdatamodeld in Sources */,
+				EE04E23829D1BB35001A7F62 /* Persistence.swift in Sources */,
+				EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */,
+				EE04E22F29D1BB34001A7F62 /* OdysseusApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE04E23C29D1BB35001A7F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE04E24529D1BB35001A7F62 /* OdysseusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE04E24629D1BB35001A7F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE04E25129D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift in Sources */,
+				EE04E24F29D1BB35001A7F62 /* OdysseusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE04E24229D1BB35001A7F62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE04E22A29D1BB34001A7F62 /* Odysseus */;
+			targetProxy = EE04E24129D1BB35001A7F62 /* PBXContainerItemProxy */;
+		};
+		EE04E24C29D1BB35001A7F62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE04E22A29D1BB34001A7F62 /* Odysseus */;
+			targetProxy = EE04E24B29D1BB35001A7F62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE04E25229D1BB35001A7F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE04E25329D1BB35001A7F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE04E25529D1BB35001A7F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Odysseus/Preview Content\"";
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team01.Odysseus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE04E25629D1BB35001A7F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Odysseus/Preview Content\"";
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team01.Odysseus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE04E25829D1BB35001A7F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team01.OdysseusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Odysseus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Odysseus";
+			};
+			name = Debug;
+		};
+		EE04E25929D1BB35001A7F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team01.OdysseusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Odysseus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Odysseus";
+			};
+			name = Release;
+		};
+		EE04E25B29D1BB35001A7F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team01.OdysseusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Odysseus;
+			};
+			name = Debug;
+		};
+		EE04E25C29D1BB35001A7F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team01.OdysseusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Odysseus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE04E22629D1BB34001A7F62 /* Build configuration list for PBXProject "Odysseus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE04E25229D1BB35001A7F62 /* Debug */,
+				EE04E25329D1BB35001A7F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE04E25429D1BB35001A7F62 /* Build configuration list for PBXNativeTarget "Odysseus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE04E25529D1BB35001A7F62 /* Debug */,
+				EE04E25629D1BB35001A7F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE04E25729D1BB35001A7F62 /* Build configuration list for PBXNativeTarget "OdysseusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE04E25829D1BB35001A7F62 /* Debug */,
+				EE04E25929D1BB35001A7F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE04E25A29D1BB35001A7F62 /* Build configuration list for PBXNativeTarget "OdysseusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE04E25B29D1BB35001A7F62 /* Debug */,
+				EE04E25C29D1BB35001A7F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE04E23929D1BB35001A7F62 /* Odysseus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE04E23A29D1BB35001A7F62 /* Odysseus.xcdatamodel */,
+			);
+			currentVersion = EE04E23A29D1BB35001A7F62 /* Odysseus.xcdatamodel */;
+			path = Odysseus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EE04E22329D1BB34001A7F62 /* Project object */;
+}
