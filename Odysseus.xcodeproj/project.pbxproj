@@ -16,6 +16,8 @@
 		EE04E24529D1BB35001A7F62 /* OdysseusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E24429D1BB35001A7F62 /* OdysseusTests.swift */; };
 		EE04E24F29D1BB35001A7F62 /* OdysseusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E24E29D1BB35001A7F62 /* OdysseusUITests.swift */; };
 		EE04E25129D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */; };
+		EE6268A529D30DD100E1C404 /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6268A429D30DD100E1C404 /* GameSceneView.swift */; };
+		EE6268A729D319B800E1C404 /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6268A629D319B800E1C404 /* SpriteKitContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		EE04E24A29D1BB35001A7F62 /* OdysseusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdysseusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE04E24E29D1BB35001A7F62 /* OdysseusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusUITests.swift; sourceTree = "<group>"; };
 		EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE6268A429D30DD100E1C404 /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
+		EE6268A629D319B800E1C404 /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
 			isa = PBXGroup;
 			children = (
+				EE6268A829D319CA00E1C404 /* POC Arcade Screen */,
 				EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */,
 				EE04E23029D1BB34001A7F62 /* ContentView.swift */,
 				EE04E23229D1BB35001A7F62 /* Assets.xcassets */,
@@ -131,6 +136,15 @@
 				EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */,
 			);
 			path = OdysseusUITests;
+			sourceTree = "<group>";
+		};
+		EE6268A829D319CA00E1C404 /* POC Arcade Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EE6268A429D30DD100E1C404 /* GameSceneView.swift */,
+				EE6268A629D319B800E1C404 /* SpriteKitContainer.swift */,
+			);
+			path = "POC Arcade Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE04E23B29D1BB35001A7F62 /* Odysseus.xcdatamodeld in Sources */,
+				EE6268A729D319B800E1C404 /* SpriteKitContainer.swift in Sources */,
 				EE04E23829D1BB35001A7F62 /* Persistence.swift in Sources */,
+				EE6268A529D30DD100E1C404 /* GameSceneView.swift in Sources */,
 				EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */,
 				EE04E22F29D1BB34001A7F62 /* OdysseusApp.swift in Sources */,
 			);
@@ -453,8 +469,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,8 +499,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
