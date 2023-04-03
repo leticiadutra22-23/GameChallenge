@@ -12,6 +12,7 @@ var enemy: SKSpriteNode = {
     enemy.name = "enemy"
     return enemy
 }()
+
 var enemySize = CGSize(width: 20, height: 20)
 var enemySpeed = 2.1
 var enemyFallTime = 0.7
@@ -31,6 +32,7 @@ let enemyCategory: UInt32 = 2
 let bulletCategory: UInt32 = 1 << 2
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+
     override func didMove(to view: SKView) {
         physicsWorld.contactDelegate = self
         bullet.physicsBody?.categoryBitMask = bulletCategory
@@ -40,6 +42,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             createNewBullet(touch.location(in: self))
+
         }
     }
     func didBegin(_ contact: SKPhysicsContact) {
@@ -68,7 +71,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     func createEnemy() {
         let xPos = randomNumbers(firstNum: 0, secondNum: frame.height)
-        enemy = SKSpriteNode(imageNamed: "enemy")
+        enemy = SKSpriteNode()
         enemy.position = CGPoint(x: xPos - 500, y: self.frame.size.height)
         moveEnemyToFloor()
         addChild(enemy)

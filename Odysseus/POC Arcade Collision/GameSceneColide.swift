@@ -18,6 +18,8 @@ class GameSceneColide: SKScene {
     var isShooting: Bool = false
 
     var bulletArray: [SKSpriteNode] = []
+    
+    var yArray: [CGFloat] = [100, 200, 300]
 
     let playableRect: CGRect
 
@@ -58,16 +60,19 @@ class GameSceneColide: SKScene {
     }
 
     private func setupEnemy() {
-        let enemy = SKSpriteNode(imageNamed: "enemy")
+        let enemy = SKSpriteNode(texture: enemyFrames[1])
         enemy.name = "enemy"
-        enemy.position = CGPoint(x: CGFloat.random(min: CGRectGetMinX(playableRect) + enemy.size.width, max: CGRectGetMaxX(playableRect) - enemy.size.width/2), y: size.height + enemy.size.height/2)
+//        enemy.position = CGPoint(x: CGFloat.random(min: CGRectGetMinX(playableRect) + enemy.size.width, max: CGRectGetMaxX(playableRect) - enemy.size.width/2), y: size.height + enemy.size.height/2)
+        enemy.position = CGPoint(x: yArray.randomElement()!, y: size.height + enemy.size.height/2)
         enemy.size = CGSize(width: 100, height: 100)
         addChild(enemy)
 
         let actionMove = SKAction.moveTo(y: -enemy.size.height/2, duration: value)
         let actionRemove = SKAction.removeFromParent()
+        let frameAction = SKAction.animate(with: enemyFrames, timePerFrame: 0.3)
 
         enemy.run(SKAction.sequence([actionMove, actionRemove]))
+        enemy.run(SKAction.repeatForever(frameAction))
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

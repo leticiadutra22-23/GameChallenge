@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB81C49E29DAF59600E3B0AB /* GameSceneColide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C49D29DAF59600E3B0AB /* GameSceneColide.swift */; };
+		AB81C4A129DB081500E3B0AB /* EnemyTextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4A029DB081500E3B0AB /* EnemyTextureAtlas.swift */; };
 		EE04E22F29D1BB34001A7F62 /* OdysseusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */; };
 		EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E23029D1BB34001A7F62 /* ContentView.swift */; };
 		EE04E23329D1BB35001A7F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE04E23229D1BB35001A7F62 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		AB81C49D29DAF59600E3B0AB /* GameSceneColide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneColide.swift; sourceTree = "<group>"; };
+		AB81C4A029DB081500E3B0AB /* EnemyTextureAtlas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyTextureAtlas.swift; sourceTree = "<group>"; };
 		EE04E22B29D1BB34001A7F62 /* Odysseus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Odysseus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusApp.swift; sourceTree = "<group>"; };
 		EE04E23029D1BB34001A7F62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			path = "POC Arcade Collision";
 			sourceTree = "<group>";
 		};
+		AB81C49F29DAFFC700E3B0AB /* POC TextureAtlas */ = {
+			isa = PBXGroup;
+			children = (
+				AB81C4A029DB081500E3B0AB /* EnemyTextureAtlas.swift */,
+			);
+			path = "POC TextureAtlas";
+			sourceTree = "<group>";
+		};
 		EE04E22229D1BB34001A7F62 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
 			isa = PBXGroup;
 			children = (
+				AB81C49F29DAFFC700E3B0AB /* POC TextureAtlas */,
 				AB81C49C29DAF56E00E3B0AB /* POC Arcade Collision */,
 				EE6268A829D319CA00E1C404 /* POC Arcade Screen */,
 				EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */,
@@ -316,6 +327,7 @@
 				EE04E23829D1BB35001A7F62 /* Persistence.swift in Sources */,
 				EE6268A529D30DD100E1C404 /* GameSceneView.swift in Sources */,
 				EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */,
+				AB81C4A129DB081500E3B0AB /* EnemyTextureAtlas.swift in Sources */,
 				EE04E22F29D1BB34001A7F62 /* OdysseusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
