@@ -18,6 +18,7 @@
 		EE04E25129D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */; };
 		EE6268A529D30DD100E1C404 /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6268A429D30DD100E1C404 /* GameSceneView.swift */; };
 		EE6268A729D319B800E1C404 /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6268A629D319B800E1C404 /* SpriteKitContainer.swift */; };
+		EE7163BC29D70FDB0059D221 /* GameSceneColide.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7163BB29D70FDB0059D221 /* GameSceneColide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EE6268A429D30DD100E1C404 /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
 		EE6268A629D319B800E1C404 /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
+		EE7163BB29D70FDB0059D221 /* GameSceneColide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameSceneColide.swift; path = ../../../../GameSceneColide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
 			isa = PBXGroup;
 			children = (
+				EE7163BA29D70FAB0059D221 /* POC Arcade Collision */,
 				EE6268A829D319CA00E1C404 /* POC Arcade Screen */,
 				EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */,
 				EE04E23029D1BB34001A7F62 /* ContentView.swift */,
@@ -145,6 +148,14 @@
 				EE6268A629D319B800E1C404 /* SpriteKitContainer.swift */,
 			);
 			path = "POC Arcade Screen";
+			sourceTree = "<group>";
+		};
+		EE7163BA29D70FAB0059D221 /* POC Arcade Collision */ = {
+			isa = PBXGroup;
+			children = (
+				EE7163BB29D70FDB0059D221 /* GameSceneColide.swift */,
+			);
+			path = "POC Arcade Collision";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +301,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -301,6 +312,7 @@
 			files = (
 				EE04E23B29D1BB35001A7F62 /* Odysseus.xcdatamodeld in Sources */,
 				EE6268A729D319B800E1C404 /* SpriteKitContainer.swift in Sources */,
+				EE7163BC29D70FDB0059D221 /* GameSceneColide.swift in Sources */,
 				EE04E23829D1BB35001A7F62 /* Persistence.swift in Sources */,
 				EE6268A529D30DD100E1C404 /* GameSceneView.swift in Sources */,
 				EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */,
