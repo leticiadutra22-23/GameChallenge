@@ -14,6 +14,8 @@ class GameSceneColide: SKScene {
     var deltaTime: TimeInterval = 0
 
     var value = 2.5 // enemy drop speed
+    
+    var score: Int = 0
 
     var isShooting: Bool = false
 
@@ -29,6 +31,7 @@ class GameSceneColide: SKScene {
         let playableMargin = (size.width-playableWidth)/2.0
         playableRect = CGRect(x: playableMargin, y: 0, width: playableWidth, height: size.height)
         super.init(size: size)
+        
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -38,7 +41,7 @@ class GameSceneColide: SKScene {
     override func didMove(to view: SKView) {
         setupBackground()
 
-        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(setupEnemy), SKAction.wait(forDuration: 0.4)])))
+        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(setupEnemy), SKAction.wait(forDuration: 0.6)])))
     }
 
     private func setupBackground() {
@@ -66,7 +69,8 @@ class GameSceneColide: SKScene {
         enemy.position = CGPoint(x: yArray.randomElement()!, y: size.height + enemy.size.height/2)
         enemy.size = CGSize(width: 100, height: 100)
         addChild(enemy)
-
+        
+        value = nextLevel(score: score, enemySpeed: value)
         let actionMove = SKAction.moveTo(y: -enemy.size.height/2, duration: value)
         let actionRemove = SKAction.removeFromParent()
         let frameAction = SKAction.animate(with: enemyFrames, timePerFrame: 0.3)
@@ -124,8 +128,17 @@ class GameSceneColide: SKScene {
     func bulletHitEnemy(enemy: SKSpriteNode) {
         enemy.removeFromParent()
         print("Hit")
+        score += 1
+        print(score)
     }
-
+    
+    func nextLevel(score: Int, enemySpeed: Double) -> Double {
+        var value = enemySpeed
+        if score > 10 {
+            value -= 1.5
+        }
+        return enemySpeed
+    }
 }
 
 
