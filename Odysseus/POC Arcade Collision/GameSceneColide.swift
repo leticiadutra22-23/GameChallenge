@@ -1,10 +1,3 @@
-//
-//  GameSceneColide.swift
-//  Odysseus
-//
-//  Created by Emilly Maia on 03/04/23.
-//
-
 import Foundation
 import SpriteKit
 
@@ -15,11 +8,36 @@ class GameSceneColide: SKScene {
 
     var value = 2.5 // enemy drop speed
 
-    var isShooting: Bool = false
+    var refire = 1
+
+    var life = 10 {
+        didSet {
+//            print("\(life)")
+        }
+    }
+
+    var isShooting: Bool = true {
+        didSet {
+//            print(isShooting)
+        }
+    }
+
+    var xArray: [CGFloat] = [100, 200, 300]
+
+    var shootingDelay: TimeInterval = 0.8
 
     var bulletArray: [SKSpriteNode] = []
 
     let playableRect: CGRect
+
+    let lifeLine: SKSpriteNode = {
+        let lifeLine = SKSpriteNode()
+        lifeLine.name = "lifeLine"
+        lifeLine.position = CGPoint(x: 200, y: 20)
+        lifeLine.color = .blue
+        lifeLine.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/20)
+        return lifeLine
+    }()
 
     override init(size: CGSize) {
         let maxAspectRatio: CGFloat = 9/16
@@ -35,8 +53,8 @@ class GameSceneColide: SKScene {
 
     override func didMove(to view: SKView) {
         setupBackground()
-
-        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(setupEnemy), SKAction.wait(forDuration: 0.4)])))
+        addChild(lifeLine)
+        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(setupEnemy), SKAction.wait(forDuration: 1.5)])))
     }
 
     private func setupBackground() {
@@ -50,8 +68,15 @@ class GameSceneColide: SKScene {
 
     private func setupBullet(touch: UITouch) {
         let bullet = SKSpriteNode(imageNamed: "bullet")
+        let xPos = touch.location(in: self).x
         bullet.name = "bullet"
-        bullet.position = CGPoint(x: touch.location(in: self).x, y: 100)
+        bullet.position = CGPoint(x: 200, y: 100)
+        if xPos < 134 {
+            bullet.position = CGPoint(x: 100, y: 100)
+        }
+        if xPos > 266 {
+            bullet.position = CGPoint(x: 300, y: 100)
+        }
         bullet.size = CGSize(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.height/10)
         bulletArray.append(bullet)
         addChild(bullet)
@@ -60,7 +85,7 @@ class GameSceneColide: SKScene {
     private func setupEnemy() {
         let enemy = SKSpriteNode(imageNamed: "enemy")
         enemy.name = "enemy"
-        enemy.position = CGPoint(x: CGFloat.random(min: CGRectGetMinX(playableRect) + enemy.size.width, max: CGRectGetMaxX(playableRect) - enemy.size.width/2), y: size.height + enemy.size.height/2)
+        enemy.position = CGPoint(x: xArray.randomElement()!, y: size.height + enemy.size.height/2)
         enemy.size = CGSize(width: 100, height: 100)
         addChild(enemy)
 
@@ -71,9 +96,24 @@ class GameSceneColide: SKScene {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
-            setupBullet(touch: touch)
+        if isShooting {
+            for touch in touches {
+                setupBullet(touch: touch)
+                isShooting = false
+                refire = 1
+            }
         }
+        if refire == 1 {
+            perform(#selector(enableShooting), with: nil, afterDelay: shootingDelay)
+            refire = 0
+        }
+
+
+    }
+
+    @objc func enableShooting() {
+        isShooting = true
+//        print("shooting delay")
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -87,10 +127,12 @@ class GameSceneColide: SKScene {
         for bullet in bulletArray {
             shoot(sprite: bullet)
         }
+
     }
 
     override func didEvaluateActions() {
         checkCollision()
+        checkLifeCollision()
     }
 
     func shoot(sprite: SKSpriteNode) {
@@ -118,9 +160,20 @@ class GameSceneColide: SKScene {
 
     func bulletHitEnemy(enemy: SKSpriteNode) {
         enemy.removeFromParent()
-        print("Hit")
     }
 
+    func checkLifeCollision() {
+//        var lifeHitEnemy: [SKSpriteNode] = []
+        enumerateChildNodes(withName: "enemy") { node, _ in
+            let enemy = node as! SKSpriteNode
+            if CGRectIntersectsRect(
+                CGRectInset(enemy.frame, 15, 15), self.lifeLine.frame) {
+//                lifeHitEnemy.append(enemy)
+                self.life = self.life - 1
+                self.bulletHitEnemy(enemy: enemy)
+            }
+        }
+    }
 }
 
 
