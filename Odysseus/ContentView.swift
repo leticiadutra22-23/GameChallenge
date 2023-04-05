@@ -3,10 +3,10 @@ import SpriteKit
 
 struct ContentView: View {
 
-    var scene: GameSceneColide {
-        let scene =  GameSceneColide(size: CGSize(width: 750, height: 1134))
+    var scene: GameScene {
+        let scene = GameScene()
+        scene.size = CGSize(width: 390, height: 844)
         scene.scaleMode = .resizeFill
-        scene.setScale(0.64)
         return scene
     }
 

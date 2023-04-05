@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB81C49E29DAF59600E3B0AB /* GameSceneColide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C49D29DAF59600E3B0AB /* GameSceneColide.swift */; };
-		AB81C4A129DB081500E3B0AB /* EnemyTextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4A029DB081500E3B0AB /* EnemyTextureAtlas.swift */; };
+		AB81C4A529DD980B00E3B0AB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4A429DD980B00E3B0AB /* GameScene.swift */; };
+		AB81C4A829DD9B8C00E3B0AB /* GameBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4A729DD9B8C00E3B0AB /* GameBackground.swift */; };
+		AB81C4AA29DDA10000E3B0AB /* GameProjectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4A929DDA10000E3B0AB /* GameProjectile.swift */; };
+		AB81C4AC29DDA48E00E3B0AB /* GameEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4AB29DDA48E00E3B0AB /* GameEnemy.swift */; };
+		AB81C4B129DDA66C00E3B0AB /* GameMechanic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4B029DDA66C00E3B0AB /* GameMechanic.swift */; };
+		AB81C4B429DDB36000E3B0AB /* GameEnemyTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4B329DDB36000E3B0AB /* GameEnemyTextures.swift */; };
+		AB81C4B629DDBA3700E3B0AB /* GameProjectileTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4B529DDBA3700E3B0AB /* GameProjectileTextures.swift */; };
 		EE04E22F29D1BB34001A7F62 /* OdysseusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */; };
 		EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E23029D1BB34001A7F62 /* ContentView.swift */; };
 		EE04E23329D1BB35001A7F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE04E23229D1BB35001A7F62 /* Assets.xcassets */; };
@@ -18,8 +23,6 @@
 		EE04E24529D1BB35001A7F62 /* OdysseusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E24429D1BB35001A7F62 /* OdysseusTests.swift */; };
 		EE04E24F29D1BB35001A7F62 /* OdysseusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E24E29D1BB35001A7F62 /* OdysseusUITests.swift */; };
 		EE04E25129D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */; };
-		EE6268A529D30DD100E1C404 /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6268A429D30DD100E1C404 /* GameSceneView.swift */; };
-		EE6268A729D319B800E1C404 /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6268A629D319B800E1C404 /* SpriteKitContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB81C49D29DAF59600E3B0AB /* GameSceneColide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneColide.swift; sourceTree = "<group>"; };
-		AB81C4A029DB081500E3B0AB /* EnemyTextureAtlas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyTextureAtlas.swift; sourceTree = "<group>"; };
+		AB81C4A429DD980B00E3B0AB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		AB81C4A729DD9B8C00E3B0AB /* GameBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackground.swift; sourceTree = "<group>"; };
+		AB81C4A929DDA10000E3B0AB /* GameProjectile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProjectile.swift; sourceTree = "<group>"; };
+		AB81C4AB29DDA48E00E3B0AB /* GameEnemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEnemy.swift; sourceTree = "<group>"; };
+		AB81C4B029DDA66C00E3B0AB /* GameMechanic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMechanic.swift; sourceTree = "<group>"; };
+		AB81C4B329DDB36000E3B0AB /* GameEnemyTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEnemyTextures.swift; sourceTree = "<group>"; };
+		AB81C4B529DDBA3700E3B0AB /* GameProjectileTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProjectileTextures.swift; sourceTree = "<group>"; };
 		EE04E22B29D1BB34001A7F62 /* Odysseus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Odysseus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusApp.swift; sourceTree = "<group>"; };
 		EE04E23029D1BB34001A7F62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,8 +62,6 @@
 		EE04E24A29D1BB35001A7F62 /* OdysseusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdysseusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE04E24E29D1BB35001A7F62 /* OdysseusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusUITests.swift; sourceTree = "<group>"; };
 		EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EE6268A429D30DD100E1C404 /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
-		EE6268A629D319B800E1C404 /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,20 +89,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB81C49C29DAF56E00E3B0AB /* POC Arcade Collision */ = {
+		AB81C4A329DD97F000E3B0AB /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
-				AB81C49D29DAF59600E3B0AB /* GameSceneColide.swift */,
+				AB81C4A429DD980B00E3B0AB /* GameScene.swift */,
 			);
-			path = "POC Arcade Collision";
+			path = GameScene;
 			sourceTree = "<group>";
 		};
-		AB81C49F29DAFFC700E3B0AB /* POC TextureAtlas */ = {
+		AB81C4A629DD9B6500E3B0AB /* GameSetup */ = {
 			isa = PBXGroup;
 			children = (
-				AB81C4A029DB081500E3B0AB /* EnemyTextureAtlas.swift */,
+				AB81C4A729DD9B8C00E3B0AB /* GameBackground.swift */,
+				AB81C4A929DDA10000E3B0AB /* GameProjectile.swift */,
+				AB81C4AB29DDA48E00E3B0AB /* GameEnemy.swift */,
 			);
-			path = "POC TextureAtlas";
+			path = GameSetup;
+			sourceTree = "<group>";
+		};
+		AB81C4AD29DDA5FB00E3B0AB /* GameMechanic */ = {
+			isa = PBXGroup;
+			children = (
+				AB81C4B029DDA66C00E3B0AB /* GameMechanic.swift */,
+			);
+			path = GameMechanic;
+			sourceTree = "<group>";
+		};
+		AB81C4B229DDB2CE00E3B0AB /* GameTextureAtlases */ = {
+			isa = PBXGroup;
+			children = (
+				AB81C4B329DDB36000E3B0AB /* GameEnemyTextures.swift */,
+				AB81C4B529DDBA3700E3B0AB /* GameProjectileTextures.swift */,
+			);
+			path = GameTextureAtlases;
 			sourceTree = "<group>";
 		};
 		EE04E22229D1BB34001A7F62 = {
@@ -122,9 +147,10 @@
 		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
 			isa = PBXGroup;
 			children = (
-				AB81C49F29DAFFC700E3B0AB /* POC TextureAtlas */,
-				AB81C49C29DAF56E00E3B0AB /* POC Arcade Collision */,
-				EE6268A829D319CA00E1C404 /* POC Arcade Screen */,
+				AB81C4B229DDB2CE00E3B0AB /* GameTextureAtlases */,
+				AB81C4AD29DDA5FB00E3B0AB /* GameMechanic */,
+				AB81C4A629DD9B6500E3B0AB /* GameSetup */,
+				AB81C4A329DD97F000E3B0AB /* GameScene */,
 				EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */,
 				EE04E23029D1BB34001A7F62 /* ContentView.swift */,
 				EE04E23229D1BB35001A7F62 /* Assets.xcassets */,
@@ -158,15 +184,6 @@
 				EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */,
 			);
 			path = OdysseusUITests;
-			sourceTree = "<group>";
-		};
-		EE6268A829D319CA00E1C404 /* POC Arcade Screen */ = {
-			isa = PBXGroup;
-			children = (
-				EE6268A429D30DD100E1C404 /* GameSceneView.swift */,
-				EE6268A629D319B800E1C404 /* SpriteKitContainer.swift */,
-			);
-			path = "POC Arcade Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,12 +339,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE04E23B29D1BB35001A7F62 /* Odysseus.xcdatamodeld in Sources */,
-				EE6268A729D319B800E1C404 /* SpriteKitContainer.swift in Sources */,
-				AB81C49E29DAF59600E3B0AB /* GameSceneColide.swift in Sources */,
+				AB81C4B129DDA66C00E3B0AB /* GameMechanic.swift in Sources */,
+				AB81C4A529DD980B00E3B0AB /* GameScene.swift in Sources */,
 				EE04E23829D1BB35001A7F62 /* Persistence.swift in Sources */,
-				EE6268A529D30DD100E1C404 /* GameSceneView.swift in Sources */,
+				AB81C4A829DD9B8C00E3B0AB /* GameBackground.swift in Sources */,
+				AB81C4AC29DDA48E00E3B0AB /* GameEnemy.swift in Sources */,
 				EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */,
-				AB81C4A129DB081500E3B0AB /* EnemyTextureAtlas.swift in Sources */,
+				AB81C4B629DDBA3700E3B0AB /* GameProjectileTextures.swift in Sources */,
+				AB81C4AA29DDA10000E3B0AB /* GameProjectile.swift in Sources */,
+				AB81C4B429DDB36000E3B0AB /* GameEnemyTextures.swift in Sources */,
 				EE04E22F29D1BB34001A7F62 /* OdysseusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
