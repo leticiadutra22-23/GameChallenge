@@ -12,6 +12,7 @@ var enemyAnimation = SKAction()
 
 let enemyFrames: [SKTexture] =
     [enemyAtlas.textureNamed("enemy1"),
-     enemyAtlas.textureNamed("enemy2")]
+     enemyAtlas.textureNamed("enemy2"),
+     enemyAtlas.textureNamed("enemy3")]
 
 

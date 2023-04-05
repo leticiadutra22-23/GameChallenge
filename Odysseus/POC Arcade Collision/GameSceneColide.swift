@@ -15,7 +15,7 @@ class GameSceneColide: SKScene {
 
     var value = 2.5 // enemy drop speed
     
-    var score: Int = 0
+    var score = 0
 
     var isShooting: Bool = false
 
@@ -42,6 +42,7 @@ class GameSceneColide: SKScene {
         setupBackground()
 
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(setupEnemy), SKAction.wait(forDuration: 0.6)])))
+//        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(nextLevel), SKAction.wait(forDuration: 0.1)])))
     }
 
     private func setupBackground() {
@@ -70,7 +71,6 @@ class GameSceneColide: SKScene {
         enemy.size = CGSize(width: 100, height: 100)
         addChild(enemy)
         
-        value = nextLevel(score: score, enemySpeed: value)
         let actionMove = SKAction.moveTo(y: -enemy.size.height/2, duration: value)
         let actionRemove = SKAction.removeFromParent()
         let frameAction = SKAction.animate(with: enemyFrames, timePerFrame: 0.3)
@@ -100,6 +100,7 @@ class GameSceneColide: SKScene {
 
     override func didEvaluateActions() {
         checkCollision()
+        nextLevel()
     }
 
     func shoot(sprite: SKSpriteNode) {
@@ -128,16 +129,22 @@ class GameSceneColide: SKScene {
     func bulletHitEnemy(enemy: SKSpriteNode) {
         enemy.removeFromParent()
         print("Hit")
-        score += 1
+        score += 200
         print(score)
     }
     
-    func nextLevel(score: Int, enemySpeed: Double) -> Double {
-        var value = enemySpeed
-        if score > 10 {
-            value -= 1.5
+    func nextLevel() {
+        
+        let levelEasy = SKAction.moveTo(y: -enemy.size.height/2, duration: value)
+        let levelMedium = SKAction.moveTo(y: -enemy.size.height/2, duration: value/2)
+        let levelHard = SKAction.moveTo(y: -enemy.size.height/2, duration: value/3)
+
+
+        if self.score < 1000 && self.score > 2000 {
+            run(levelEasy)
+        } else if self.score > 2000 &&  self.score < 2500{
+            run(levelMedium)
         }
-        return enemySpeed
     }
 }
 
