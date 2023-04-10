@@ -6,7 +6,7 @@ extension GameScene {
         sprite.position = CGPoint(x: sprite.position.x, y: sprite.position.y + 15)
     }
     
-    func enemyMovement(_ enemy: SKSpriteNode) { // split into animate and movement
+    func enemyMovement(_ enemy: SKSpriteNode) {
         let enemyTexture = Enemy()
         let frameAction = SKAction.animate(with: enemyTexture.enemyFrames, timePerFrame: 0.3)
         let actionMove = SKAction.moveTo(y: -enemy.size.height/2, duration: 2.5)
@@ -31,6 +31,8 @@ extension GameScene {
                     self.spawnProjectiles.remove(at: index)
                     projectile.removeFromParent()
                     hitEnemy.append(enemy)
+                    self.incrementScore() // aumento do score.
+                    print("Score: \(self.score)")
                 }
             }
         }
@@ -43,9 +45,19 @@ extension GameScene {
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(createEnemy), SKAction.wait(forDuration: 0.6)])))
     }
     
-    func animateProjectile(_ projectile: SKSpriteNode) { // move to movement
+    func animateProjectile(_ projectile: SKSpriteNode) {
         let projectileTexture = Projectile()
         let frameAction = SKAction.animate(with: projectileTexture.projectileFrames, timePerFrame: 0.3)
         projectile.run(SKAction.repeatForever(frameAction))
+    }
+
+    func incrementScore() { // aumentador de pontuação.
+        self.score += 1
+    }
+
+    func checkScore() { // verificador de fase.
+        if self.score > 10 {
+            self.score = 0
+        }
     }
 }

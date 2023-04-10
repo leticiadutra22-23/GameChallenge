@@ -4,6 +4,10 @@ import SpriteKit
 class GameScene: SKScene {
 
     var spawnProjectiles: [SKSpriteNode] = []
+
+    let spawnLanes: [Double] = [200, 100, 300]
+
+    var score: Int = 0
     
     override func didMove(to view: SKView) {
         setupBackground()
@@ -24,6 +28,7 @@ class GameScene: SKScene {
 
     override func didEvaluateActions() {
         checkCollision()
+        checkScore()
     }
 
 }
