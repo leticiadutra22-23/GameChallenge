@@ -6,7 +6,7 @@ struct ContentView: View {
     var scene: GameScene {
         let scene = GameScene()
         scene.size = CGSize(width: 390, height: 844)
-        scene.scaleMode = .resizeFill
+        scene.scaleMode = .fill
         return scene
     }
 
