@@ -8,9 +8,16 @@ class GameScene: SKScene {
     let spawnLanes: [Double] = [200, 100, 300]
 
     var score: Int = 0
+
+    var life: Int = 3
+
+    var final: Bool = false
+
+    var ulisses: SKSpriteNode = SKSpriteNode()
     
     override func didMove(to view: SKView) {
         setupBackground()
+        self.ulisses = setupUlisses()
         setupEnemy()
     }
     
@@ -28,7 +35,9 @@ class GameScene: SKScene {
 
     override func didEvaluateActions() {
         checkCollision()
+        checkUlissesCollision()
         checkScore()
+        checkGameOver()
     }
 
 }

@@ -23,6 +23,9 @@
 		EE04E24529D1BB35001A7F62 /* OdysseusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E24429D1BB35001A7F62 /* OdysseusTests.swift */; };
 		EE04E24F29D1BB35001A7F62 /* OdysseusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E24E29D1BB35001A7F62 /* OdysseusUITests.swift */; };
 		EE04E25129D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */; };
+		EE80846329E435A600302ABA /* GameUlissesTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846229E435A600302ABA /* GameUlissesTexture.swift */; };
+		EE80846529E4369F00302ABA /* GameUlisses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846429E4369F00302ABA /* GameUlisses.swift */; };
+		EE80846829E43EFF00302ABA /* GameAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846729E43EFF00302ABA /* GameAnimations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		EE04E24A29D1BB35001A7F62 /* OdysseusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdysseusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE04E24E29D1BB35001A7F62 /* OdysseusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusUITests.swift; sourceTree = "<group>"; };
 		EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE80846229E435A600302ABA /* GameUlissesTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUlissesTexture.swift; sourceTree = "<group>"; };
+		EE80846429E4369F00302ABA /* GameUlisses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUlisses.swift; sourceTree = "<group>"; };
+		EE80846729E43EFF00302ABA /* GameAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 				AB81C4A729DD9B8C00E3B0AB /* GameBackground.swift */,
 				AB81C4A929DDA10000E3B0AB /* GameProjectile.swift */,
 				AB81C4AB29DDA48E00E3B0AB /* GameEnemy.swift */,
+				EE80846429E4369F00302ABA /* GameUlisses.swift */,
 			);
 			path = GameSetup;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 			children = (
 				AB81C4B329DDB36000E3B0AB /* GameEnemyTextures.swift */,
 				AB81C4B529DDBA3700E3B0AB /* GameProjectileTextures.swift */,
+				EE80846229E435A600302ABA /* GameUlissesTexture.swift */,
 			);
 			path = GameTextureAtlases;
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
 			isa = PBXGroup;
 			children = (
+				EE80846629E43EED00302ABA /* GameAnimations */,
 				AB81C4B229DDB2CE00E3B0AB /* GameTextureAtlases */,
 				AB81C4AD29DDA5FB00E3B0AB /* GameMechanic */,
 				AB81C4A629DD9B6500E3B0AB /* GameSetup */,
@@ -184,6 +193,14 @@
 				EE04E25029D1BB35001A7F62 /* OdysseusUITestsLaunchTests.swift */,
 			);
 			path = OdysseusUITests;
+			sourceTree = "<group>";
+		};
+		EE80846629E43EED00302ABA /* GameAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				EE80846729E43EFF00302ABA /* GameAnimations.swift */,
+			);
+			path = GameAnimations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,10 +355,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE80846529E4369F00302ABA /* GameUlisses.swift in Sources */,
 				EE04E23B29D1BB35001A7F62 /* Odysseus.xcdatamodeld in Sources */,
 				AB81C4B129DDA66C00E3B0AB /* GameMechanic.swift in Sources */,
+				EE80846329E435A600302ABA /* GameUlissesTexture.swift in Sources */,
 				AB81C4A529DD980B00E3B0AB /* GameScene.swift in Sources */,
 				EE04E23829D1BB35001A7F62 /* Persistence.swift in Sources */,
+				EE80846829E43EFF00302ABA /* GameAnimations.swift in Sources */,
 				AB81C4A829DD9B8C00E3B0AB /* GameBackground.swift in Sources */,
 				AB81C4AC29DDA48E00E3B0AB /* GameEnemy.swift in Sources */,
 				EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */,
