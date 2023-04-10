@@ -34,7 +34,7 @@ extension GameScene {
 
     func checkGameOver() {
         if self.life < 1 {
-            print("PERDEU ÉNAM")
+            gameOver()
             self.score = 0
             self.life = 3
         }
@@ -52,7 +52,7 @@ extension GameScene {
                     projectile.removeFromParent()
                     hitEnemy.append(enemy)
                     self.incrementScore() // aumento do score.
-                    print("Score: \(self.score)")
+//                    print("Score: \(self.score)")
                 }
             }
         }
@@ -68,7 +68,7 @@ extension GameScene {
                 CGRectInset(enemy.frame, 15, 15), self.ulisses.frame) {
                 self.projectileHitEnemy(enemy: enemy)
                 self.decrementLife() // diminuição de vida.
-                print("Vidas: \(self.life)")
+//                print("Vidas: \(self.life)")
             }
         }
     }
@@ -83,6 +83,11 @@ extension GameScene {
 
     func decrementLife() {
         self.life -= 1
+    }
+
+    @objc func enableShooting() {
+        self.isShooting = 1
+//        print("Alterou")
     }
 
 }

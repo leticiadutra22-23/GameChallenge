@@ -3,8 +3,8 @@ import SpriteKit
 
 struct ContentView: View {
 
-    var scene: GameScene {
-        let scene = GameScene()
+    var scene: GameStartScene {
+        let scene = GameStartScene()
         scene.size = CGSize(width: 390, height: 844)
         scene.scaleMode = .fill
         return scene
@@ -14,5 +14,6 @@ struct ContentView: View {
         SpriteView(scene: scene)
             .ignoresSafeArea()
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            .navigationBarBackButtonHidden()
     }
 }
