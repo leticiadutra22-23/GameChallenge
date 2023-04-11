@@ -7,8 +7,10 @@ struct Ulisses {
 
     init() {
         self.ulissesAtlas = SKTextureAtlas(named: "Ulisses")
-        self.ulissesFrames = [ulissesAtlas.textureNamed("ulisses"),
-                            ulissesAtlas.textureNamed("ulisses1"),
-                            ulissesAtlas.textureNamed("ulisses")]
+        self.ulissesFrames = [ulissesAtlas.textureNamed("ulisses1"),
+                            ulissesAtlas.textureNamed("ulisses2"),
+                            ulissesAtlas.textureNamed("ulisses3"),
+                            ulissesAtlas.textureNamed("ulisses4"),
+                            ulissesAtlas.textureNamed("ulisses5")]
     }
 }

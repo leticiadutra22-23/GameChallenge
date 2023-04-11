@@ -20,17 +20,21 @@ class GameScene: SKScene {
     var final: Bool = false
 
     var ulisses: SKSpriteNode = SKSpriteNode()
+    
+    var arm: SKSpriteNode = SKSpriteNode()
+
 
     var gameScene: GameOverScene {
         let scene = GameOverScene()
         scene.size = CGSize(width: 390, height: 844)
-        scene.scaleMode = .fill
+        scene.scaleMode = .aspectFit
         return scene
     }
     
     override func didMove(to view: SKView) {
         setupBackground()
         self.ulisses = setupUlisses()
+        self.arm = setupArm()
         setupEnemy()
     }
     
