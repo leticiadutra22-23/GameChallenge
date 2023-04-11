@@ -3,11 +3,11 @@ import SpriteKit
 
 extension GameScene {
     func projectileMovement(_ sprite: SKSpriteNode) {
-        sprite.position = CGPoint(x: sprite.position.x, y: sprite.position.y + 15)
+        sprite.position = CGPoint(x: sprite.position.x, y: sprite.position.y + self.mechanicValues[6])
     }
     
     func enemyMovement(_ enemy: SKSpriteNode) {
-        let actionMove = SKAction.moveTo(y: -enemy.size.height/2, duration: 2.5)
+        let actionMove = SKAction.moveTo(y: -enemy.size.height/2, duration: self.mechanicValues[7])
         let actionRemove = SKAction.removeFromParent()
         animateEnemy(enemy)
 
@@ -15,7 +15,7 @@ extension GameScene {
     }
 
     func enemyMovement2(_ enemy: SKSpriteNode) { // teoricamente o projetil atirado pelo chefão.
-        let actionMove = SKAction.moveTo(y: -enemy.size.height/2, duration: 2.5)
+        let actionMove = SKAction.moveTo(y: -enemy.size.height/2, duration: self.mechanicValues[7])
         let actionRemove = SKAction.removeFromParent()
         animateEnemy2(enemy)
 
@@ -27,16 +27,16 @@ extension GameScene {
     }
 
     func checkScore() { // verificador de fase.
-        if self.score > 10 {
-            self.score = 0
+        if self.mechanicValues[0] > 10 {
+            self.mechanicValues[0] = 0
         }
     }
 
     func checkGameOver() {
-        if self.life < 1 {
+        if self.mechanicValues[1] < 1 {
+            self.mechanicValues[0] = 0
+            self.mechanicValues[1] = 3
             gameOver()
-            self.score = 0
-            self.life = 3
         }
     }
     
@@ -51,8 +51,7 @@ extension GameScene {
                     self.spawnProjectiles.remove(at: index)
                     projectile.removeFromParent()
                     hitEnemy.append(enemy)
-                    self.incrementScore() // aumento do score.
-//                    print("Score: \(self.score)")
+                    self.incrementScore()
                 }
             }
         }
@@ -67,27 +66,25 @@ extension GameScene {
             if CGRectIntersectsRect(
                 CGRectInset(enemy.frame, 15, 15), self.ulisses.frame) {
                 self.projectileHitEnemy(enemy: enemy)
-                self.decrementLife() // diminuição de vida.
-//                print("Vidas: \(self.life)")
+                self.decrementLife()
             }
         }
     }
     
     func setupEnemy() {
-        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(createEnemy), SKAction.wait(forDuration: 0.6)])))
+        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(createEnemy), SKAction.wait(forDuration: self.mechanicValues[8])])))
     }
 
-    func incrementScore() { // aumentador de pontuação.
-        self.score += 1
+    func incrementScore() {
+        self.mechanicValues[0] += 1
     }
 
     func decrementLife() {
-        self.life -= 1
+        self.mechanicValues[1] -= 1
     }
 
     @objc func enableShooting() {
-        self.isShooting = 1
-//        print("Alterou")
+        self.mechanicValues[2] = 1
     }
 
 }

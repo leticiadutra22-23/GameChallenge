@@ -28,6 +28,7 @@
 		EE80846829E43EFF00302ABA /* GameAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846729E43EFF00302ABA /* GameAnimations.swift */; };
 		EE80846D29E44BBF00302ABA /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846C29E44BBF00302ABA /* GameOverScene.swift */; };
 		EE80846F29E44FA600302ABA /* GameStartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846E29E44FA600302ABA /* GameStartScene.swift */; };
+		EE80847229E5A33000302ABA /* GameDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80847129E5A33000302ABA /* GameDifficulty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		EE80846729E43EFF00302ABA /* GameAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnimations.swift; sourceTree = "<group>"; };
 		EE80846C29E44BBF00302ABA /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		EE80846E29E44FA600302ABA /* GameStartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartScene.swift; sourceTree = "<group>"; };
+		EE80847029E59F3700302ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EE80847129E5A33000302ABA /* GameDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDifficulty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 				AB81C4A929DDA10000E3B0AB /* GameProjectile.swift */,
 				AB81C4AB29DDA48E00E3B0AB /* GameEnemy.swift */,
 				EE80846429E4369F00302ABA /* GameUlisses.swift */,
+				EE80847129E5A33000302ABA /* GameDifficulty.swift */,
 			);
 			path = GameSetup;
 			sourceTree = "<group>";
@@ -161,6 +165,7 @@
 		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
 			isa = PBXGroup;
 			children = (
+				EE80847029E59F3700302ABA /* Info.plist */,
 				EE80846B29E4487300302ABA /* GameApp */,
 				AB81C4A329DD97F000E3B0AB /* GameScene */,
 				AB81C4AD29DDA5FB00E3B0AB /* GameMechanic */,
@@ -377,6 +382,7 @@
 				EE04E23829D1BB35001A7F62 /* Persistence.swift in Sources */,
 				EE80846829E43EFF00302ABA /* GameAnimations.swift in Sources */,
 				EE80846F29E44FA600302ABA /* GameStartScene.swift in Sources */,
+				EE80847229E5A33000302ABA /* GameDifficulty.swift in Sources */,
 				AB81C4A829DD9B8C00E3B0AB /* GameBackground.swift in Sources */,
 				AB81C4AC29DDA48E00E3B0AB /* GameEnemy.swift in Sources */,
 				EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */,
@@ -546,7 +552,7 @@
 				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Odysseus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -576,7 +582,7 @@
 				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Odysseus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
