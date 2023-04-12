@@ -79,7 +79,7 @@ class GameScene: SKScene {
     override func didEvaluateActions() {
         checkCollision()
         checkUlissesCollision()
-        checkScore()
+//        checkScore()
         checkGameOver()
     }
 
