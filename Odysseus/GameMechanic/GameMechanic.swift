@@ -14,7 +14,8 @@ extension GameScene {
         enemy.run(SKAction.sequence([actionMove, actionRemove]))
     }
 
-    func enemyMovement2(_ enemy: SKSpriteNode) { // teoricamente o projetil atirado pelo chefão.
+    func enemyMovement2(_ enemy: SKSpriteNode) {
+        
         let actionMove = SKAction.moveTo(y: -enemy.size.height/2, duration: 2.5)
         let actionRemove = SKAction.removeFromParent()
         animateEnemy2(enemy)
@@ -26,8 +27,8 @@ extension GameScene {
         enemy.removeFromParent()
     }
 
-    func checkScore() { // verificador de fase.
-        if self.score > 10 {
+    func checkScore() {
+        if self.score > 100 {
             self.score = 0
         }
     }
@@ -77,8 +78,8 @@ extension GameScene {
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(createEnemy), SKAction.wait(forDuration: 0.6)])))
     }
 
-    func incrementScore() { // aumentador de pontuação.
-        self.score += 1
+    func incrementScore() {
+        self.score += 10
     }
 
     func decrementLife() {
@@ -87,7 +88,5 @@ extension GameScene {
 
     @objc func enableShooting() {
         self.isShooting = 1
-//        print("Alterou")
     }
-
 }

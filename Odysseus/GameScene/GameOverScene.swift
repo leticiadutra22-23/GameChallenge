@@ -30,19 +30,3 @@ class GameOverScene: SKScene {
     }
 }
 
-extension GameOverScene {
-    func setupBackground() {
-        let background = SKSpriteNode(imageNamed: "gameover")
-        background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        background.position = CGPoint(x: size.width/2, y: size.height/2)
-        background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-
-        addChild(background)
-        
-        let gameOverButton = SKSpriteNode(imageNamed: "startButton")
-        gameOverButton.position = CGPoint(x: size.width/2, y: size.height/3.5)
-        gameOverButton.size = CGSize(width: 236, height: 97)
-        gameOverButton.name = "startButton"
-        addChild(gameOverButton)
-    }
-}

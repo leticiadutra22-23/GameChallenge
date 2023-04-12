@@ -30,18 +30,4 @@ class GameStartScene: SKScene {
     }
 }
 
-extension GameStartScene {
-    func setupBackground() {
-        let background = SKSpriteNode(imageNamed: "menu")
-        background.position = CGPoint(x: size.width/2, y: size.height/2)
-        background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        addChild(background)
-        
-        let startButton = SKSpriteNode(imageNamed: "startButton")
-        startButton.position = CGPoint(x: size.width/2, y: size.height/3.5)
-        startButton.size = CGSize(width: 236, height: 97)
-        startButton.name = "startButton"
-        addChild(startButton)
-    }
-}
+

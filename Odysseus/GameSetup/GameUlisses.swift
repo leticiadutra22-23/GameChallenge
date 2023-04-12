@@ -7,7 +7,7 @@ extension GameScene {
 
         ulisses.name = "ulisses"
         ulisses.position = CGPoint(x: self.spawnLanes[0], y: 60)
-        ulisses.size = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/6.5)
+        ulisses.size = CGSize(width: 89, height: 92)
         ulisses.zPosition = 1
 
         animateUlisses(ulisses)

@@ -6,10 +6,28 @@ class GameScene: SKScene {
     var spawnProjectiles: [SKSpriteNode] = []
 
     let spawnLanes: [Double] = [200, 100, 300]
+    
+    var score2: SKLabelNode = SKLabelNode()
 
-    var score: Int = 0
+    var score: Int = 0 {
+        didSet {
+            score2.text = "\(score)"
+            print("didset score")
+        }
+    }
 
-    var life: Int = 3
+    var life: Int = 3 {
+        didSet {
+            if life == 2 {
+                self.life2.texture = SKTexture(imageNamed: "life2")
+            }
+            if life == 1 {
+                self.life2.texture = SKTexture(imageNamed: "life1")
+            }
+        }
+    }
+    
+    var life2: SKSpriteNode = SKSpriteNode(imageNamed: "life3")
 
     var isShooting = 1
 
