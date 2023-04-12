@@ -21,7 +21,7 @@ class GameScene: SKScene {
 
     var ulisses: SKSpriteNode = SKSpriteNode()
     
-    var arm: SKSpriteNode = SKSpriteNode()
+    var arms: [SKSpriteNode] = []
 
 
     var gameScene: GameOverScene {
@@ -34,7 +34,7 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         setupBackground()
         self.ulisses = setupUlisses()
-        self.arm = setupArm()
+        self.arms = setupArm()
         setupEnemy()
     }
     

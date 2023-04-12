@@ -15,6 +15,7 @@ struct Arm {
                           armAtlas.textureNamed("canhao6"),
                           armAtlas.textureNamed("canhao7"),
                           armAtlas.textureNamed("canhao8"),
-                          armAtlas.textureNamed("canhao9")]
+                          armAtlas.textureNamed("canhao9"),
+                          armAtlas.textureNamed("canhao1")]
     }
 }

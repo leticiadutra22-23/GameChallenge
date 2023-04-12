@@ -3,8 +3,8 @@ import SpriteKit
 
 class GameOverScene: SKScene {
 
-    var gameScene: GameStartScene {
-        let scene = GameStartScene()
+    var gameScene: GameScene {
+        let scene = GameScene()
         scene.size = CGSize(width: 390, height: 844)
         scene.scaleMode = .fill
         return scene
@@ -15,8 +15,17 @@ class GameOverScene: SKScene {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for _ in touches {
-            self.view?.presentScene(self.gameScene)
+        guard let touch = touches.first else { return }
+        let touchLocation = touch.location(in: self)
+        touchedButton(touchLocation: touchLocation, buttonName: "startButton")
+    }
+    
+    func touchedButton(touchLocation: CGPoint, buttonName: String) {
+        let nodeAtPoint = atPoint(touchLocation)
+        if let touchedNode = nodeAtPoint as? SKSpriteNode {
+            if touchedNode.name?.starts(with: buttonName) == true {
+                self.view?.presentScene(self.gameScene)
+            }
         }
     }
 }
@@ -24,10 +33,16 @@ class GameOverScene: SKScene {
 extension GameOverScene {
     func setupBackground() {
         let background = SKSpriteNode(imageNamed: "gameover")
-        background.size = CGSize(width: 295.98, height: 161.62)
-        background.position = CGPoint(x: size.width/2, y: size.height * 0.7)
+        background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-       // background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+
         addChild(background)
+        
+        let gameOverButton = SKSpriteNode(imageNamed: "startButton")
+        gameOverButton.position = CGPoint(x: size.width/2, y: size.height/3.5)
+        gameOverButton.size = CGSize(width: 236, height: 97)
+        gameOverButton.name = "startButton"
+        addChild(gameOverButton)
     }
 }

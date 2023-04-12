@@ -51,8 +51,7 @@ extension GameScene {
                     self.spawnProjectiles.remove(at: index)
                     projectile.removeFromParent()
                     hitEnemy.append(enemy)
-                    self.incrementScore() // aumento do score.
-//                    print("Score: \(self.score)")
+                    self.incrementScore()
                 }
             }
         }
@@ -64,11 +63,12 @@ extension GameScene {
     func checkUlissesCollision() {
         enumerateChildNodes(withName: "enemy") { node, _ in
             let enemy = node as! SKSpriteNode
-            if CGRectIntersectsRect(
-                CGRectInset(enemy.frame, 15, 15), self.ulisses.frame) {
-                self.projectileHitEnemy(enemy: enemy)
-                self.decrementLife() // diminuição de vida.
-//                print("Vidas: \(self.life)")
+            for arm in self.arms {
+                if CGRectIntersectsRect(
+                    CGRectInset(enemy.frame, 15, 15), arm.frame) {
+                    self.projectileHitEnemy(enemy: enemy)
+                    self.decrementLife()
+                }
             }
         }
     }

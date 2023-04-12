@@ -35,7 +35,7 @@ extension GameScene {
     func animateArm(_ arm: SKSpriteNode) {
         let armTexture = Arm()
         let frameAction = SKAction.animate(with: armTexture.armFrames, timePerFrame: 0.1)
-        arm.run(SKAction.repeatForever(frameAction))
+        arm.run(frameAction)
     }
     
     

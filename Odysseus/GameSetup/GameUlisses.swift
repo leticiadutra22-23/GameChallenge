@@ -6,7 +6,7 @@ extension GameScene {
         let ulisses = SKSpriteNode()
 
         ulisses.name = "ulisses"
-        ulisses.position = CGPoint(x: 200, y: 60)
+        ulisses.position = CGPoint(x: self.spawnLanes[0], y: 60)
         ulisses.size = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/6.5)
         ulisses.zPosition = 1
 
