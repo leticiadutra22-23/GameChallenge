@@ -31,7 +31,7 @@ extension GameScene {
     
     func animateBackground(_ background: SKSpriteNode) {
         let backgroundTexture = Background()
-        let frameAction = SKAction.animate(with: backgroundTexture.backgroundFrames, timePerFrame: 0.27)
+        let frameAction = SKAction.animate(with: backgroundTexture.backgroundFrames, timePerFrame: 0.45)
         background.run(SKAction.repeatForever(frameAction))
     }
     
