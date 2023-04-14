@@ -29,8 +29,6 @@
 		EE80846329E435A600302ABA /* GameUlissesTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846229E435A600302ABA /* GameUlissesTexture.swift */; };
 		EE80846529E4369F00302ABA /* GameUlisses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846429E4369F00302ABA /* GameUlisses.swift */; };
 		EE80846829E43EFF00302ABA /* GameAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846729E43EFF00302ABA /* GameAnimations.swift */; };
-		EE80846D29E44BBF00302ABA /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846C29E44BBF00302ABA /* GameOverScene.swift */; };
-		EE80846F29E44FA600302ABA /* GameStartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846E29E44FA600302ABA /* GameStartScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +75,6 @@
 		EE80846229E435A600302ABA /* GameUlissesTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUlissesTexture.swift; sourceTree = "<group>"; };
 		EE80846429E4369F00302ABA /* GameUlisses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUlisses.swift; sourceTree = "<group>"; };
 		EE80846729E43EFF00302ABA /* GameAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnimations.swift; sourceTree = "<group>"; };
-		EE80846C29E44BBF00302ABA /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
-		EE80846E29E44FA600302ABA /* GameStartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				AB81C4A429DD980B00E3B0AB /* GameScene.swift */,
-				EE80846C29E44BBF00302ABA /* GameOverScene.swift */,
-				EE80846E29E44FA600302ABA /* GameStartScene.swift */,
 			);
 			path = GameScene;
 			sourceTree = "<group>";
@@ -389,7 +383,6 @@
 				AB81C4A529DD980B00E3B0AB /* GameScene.swift in Sources */,
 				EE04E23829D1BB35001A7F62 /* Persistence.swift in Sources */,
 				EE80846829E43EFF00302ABA /* GameAnimations.swift in Sources */,
-				EE80846F29E44FA600302ABA /* GameStartScene.swift in Sources */,
 				AB81C4A829DD9B8C00E3B0AB /* GameBackground.swift in Sources */,
 				AB81C4AC29DDA48E00E3B0AB /* GameEnemy.swift in Sources */,
 				EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */,
@@ -397,7 +390,6 @@
 				AB81C4B929E5987700E3B0AB /* GameBackgroundTexture.swift in Sources */,
 				AB81C4AA29DDA10000E3B0AB /* GameProjectile.swift in Sources */,
 				AB81C4B429DDB36000E3B0AB /* GameEnemyTextures.swift in Sources */,
-				EE80846D29E44BBF00302ABA /* GameOverScene.swift in Sources */,
 				EE04E22F29D1BB34001A7F62 /* OdysseusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
