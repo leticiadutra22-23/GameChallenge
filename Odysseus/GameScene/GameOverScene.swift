@@ -17,7 +17,8 @@ class GameOverScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let touchLocation = touch.location(in: self)
-        touchedButton(touchLocation: touchLocation, buttonName: "startButton")
+        touchedButton(touchLocation: touchLocation, buttonName: "jogarNovamente")
+        touchedButton(touchLocation: touchLocation, buttonName: "voltarMenu")
     }
     
     func touchedButton(touchLocation: CGPoint, buttonName: String) {
