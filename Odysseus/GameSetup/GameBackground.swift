@@ -16,20 +16,6 @@ extension GameScene {
     }
 
     private func setupGameBackground() {
-
-        self.spawnProjectiles = []
-        self.spawnLanes = [200, 100, 300]
-        self.score2 = SKLabelNode()
-        self.score = 0
-        self.life = 3
-        self.life2 = SKSpriteNode(imageNamed: "life3")
-        self.isShooting = 1
-        self.refire = 1
-        self.shootingDelay = 0.3
-        self.final = false
-        self.ulisses = SKSpriteNode()
-        self.arms = []
-        
         let background = SKSpriteNode()
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
@@ -37,15 +23,15 @@ extension GameScene {
         animateBackground(background)
         addChild(background)
 
-        life2?.position = CGPoint(x: 75, y: 775)
-        life2?.size = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/16)
-        life2?.zPosition = 2
-        addChild(life2!)
+        life2.position = CGPoint(x: 75, y: 775)
+        life2.size = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/16)
+        life2.zPosition = 2
+        addChild(life2)
 
-        score2?.position = CGPoint(x: 325, y: 765)
-        score2?.text = "0"
-        score2?.zPosition = 2
-        addChild(score2!)
+        score2.position = CGPoint(x: 325, y: 765)
+        score2.text = "0"
+        score2.zPosition = 2
+        addChild(score2)
 
     }
 

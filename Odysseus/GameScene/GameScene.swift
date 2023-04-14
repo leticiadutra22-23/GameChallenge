@@ -3,32 +3,31 @@ import SpriteKit
 import SwiftUI
 
 class GameScene: SKScene {
-
-    var spawnProjectiles: [SKSpriteNode]? // = []
-    var spawnLanes: [Double]? // = [200, 100, 300]
-    var score2: SKLabelNode? // = SKLabelNode()
-    var score: Int? { // = 0
+    var spawnProjectiles: [SKSpriteNode] = []
+    var spawnLanes: [Double] = [200, 100, 300]
+    var score2: SKLabelNode = SKLabelNode()
+    var score: Int = 0 {
         didSet {
-            score2?.text = String(score!)
+            score2.text = String(score)
         }
     }
-    var life: Int? { // = 3
+    var life: Int = 3 {
         didSet {
             if life == 2 {
-                self.life2?.texture = SKTexture(imageNamed: "life2")
+                self.life2.texture = SKTexture(imageNamed: "life2")
             }
             if life == 1 {
-                self.life2?.texture = SKTexture(imageNamed: "life1")
+                self.life2.texture = SKTexture(imageNamed: "life1")
             }
         }
     }
-    var life2: SKSpriteNode? // = SKSpriteNode(imageNamed: "life3")
-    var isShooting: Double? // = 1
-    var refire: Double? // = 1
-    var shootingDelay: Double? // = 0.3
-    var final: Bool? // = false
-    var ulisses: SKSpriteNode? // = SKSpriteNode()
-    var arms: [SKSpriteNode]? // = []
+    var life2: SKSpriteNode = SKSpriteNode(imageNamed: "life3")
+    var isShooting: Double = 1
+    var refire: Double = 1
+    var shootingDelay: Double = 0.3
+    var final: Bool = false
+    var ulisses: SKSpriteNode = SKSpriteNode()
+    var arms: [SKSpriteNode] = []
 
     var gameOverScene: GameScene {
         let scene = GameScene()
@@ -48,7 +47,7 @@ class GameScene: SKScene {
         let scene = GameScene()
         scene.name = "game"
         scene.size = CGSize(width: 390, height: 844)
-        scene.scaleMode = .aspectFit
+        scene.scaleMode = .fill
         return scene
     }
 
@@ -73,7 +72,7 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         if self.name == "game" {
-            for projectile in spawnProjectiles! {
+            for projectile in spawnProjectiles {
                 projectileMovement(projectile)
             }
         }
@@ -101,7 +100,7 @@ class GameScene: SKScene {
             }
         }
         if self.refire == 1 {
-            perform(#selector(enableShooting), with: nil, afterDelay: shootingDelay!)
+            perform(#selector(enableShooting), with: nil, afterDelay: shootingDelay)
             self.refire = 0
         }
     }
@@ -111,7 +110,7 @@ class GameScene: SKScene {
         if let touchedNode = nodeAtPoint as? SKSpriteNode {
             if touchedNode.name?.starts(with: buttonName) == true {
                 if self.name == "over" {
-                    self.view?.presentScene(gameStartScene)
+                    self.view?.presentScene(gameScene)
                 } else if self.name == "start" {
                     self.view?.presentScene(gameScene)
                 }

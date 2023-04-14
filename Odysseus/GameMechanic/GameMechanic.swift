@@ -28,13 +28,13 @@ extension GameScene {
     }
 
     func checkScore() {
-        if self.score! > 100 {
+        if self.score > 100 {
             self.score = 0
         }
     }
 
     func checkGameOver() {
-        if self.life! < 1 {
+        if self.life < 1 {
             gameOver()
             self.score = 0
             self.life = 3
@@ -45,11 +45,11 @@ extension GameScene {
         var hitEnemy: [SKSpriteNode] = []
         enumerateChildNodes(withName: "enemy") { node, _ in
             let enemy = node as! SKSpriteNode
-            for projectile in self.spawnProjectiles! {
+            for projectile in self.spawnProjectiles {
                 if CGRectIntersectsRect(
                     CGRectInset(enemy.frame, 15, 15), projectile.frame) {
-                    guard let index = self.spawnProjectiles?.firstIndex(of: projectile) else { return }
-                    self.spawnProjectiles?.remove(at: index)
+                    guard let index = self.spawnProjectiles.firstIndex(of: projectile) else { return }
+                    self.spawnProjectiles.remove(at: index)
                     projectile.removeFromParent()
                     hitEnemy.append(enemy)
                     self.incrementScore()
@@ -64,7 +64,7 @@ extension GameScene {
     func checkUlissesCollision() {
         enumerateChildNodes(withName: "enemy") { node, _ in
             let enemy = node as! SKSpriteNode
-            for arm in self.arms! {
+            for arm in self.arms {
                 if CGRectIntersectsRect(
                     CGRectInset(enemy.frame, 15, 15), arm.frame) {
                     self.projectileHitEnemy(enemy: enemy)
@@ -79,11 +79,11 @@ extension GameScene {
     }
 
     func incrementScore() {
-        self.score! += 10
+        self.score += 10
     }
 
     func decrementLife() {
-        self.life! -= 1
+        self.life -= 1
     }
 
     @objc func enableShooting() {
