@@ -61,6 +61,7 @@
 		AB81C4B829E5987700E3B0AB /* GameBackgroundTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackgroundTexture.swift; sourceTree = "<group>"; };
 		AB81C4BA29E5A23100E3B0AB /* GameArm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameArm.swift; sourceTree = "<group>"; };
 		AB81C4BC29E5A66300E3B0AB /* GameArmTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameArmTextures.swift; sourceTree = "<group>"; };
+		AB81C4BE29E9720000E3B0AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EE04E22B29D1BB34001A7F62 /* Odysseus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Odysseus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusApp.swift; sourceTree = "<group>"; };
 		EE04E23029D1BB34001A7F62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
 			isa = PBXGroup;
 			children = (
+				AB81C4BE29E9720000E3B0AB /* Info.plist */,
 				EE80846B29E4487300302ABA /* GameApp */,
 				AB81C4A329DD97F000E3B0AB /* GameScene */,
 				AB81C4AD29DDA5FB00E3B0AB /* GameMechanic */,
@@ -558,7 +560,7 @@
 				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Odysseus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -588,7 +590,7 @@
 				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Odysseus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
