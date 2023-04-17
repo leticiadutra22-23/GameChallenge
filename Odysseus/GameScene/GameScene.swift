@@ -5,26 +5,32 @@ import SwiftUI
 class GameScene: SKScene {
     var spawnProjectiles: [SKSpriteNode] = []
     var spawnLanes: [Double] = [200, 100, 300]
-    var score2: SKLabelNode = SKLabelNode()
+    var showScore: SKLabelNode = SKLabelNode()
     var score: Int = 0 {
         didSet {
-            score2.text = String(score)
+            showScore.text = String(score)
         }
     }
     var life: Int = 3 {
         didSet {
             if life == 2 {
-                self.life2.texture = SKTexture(imageNamed: "life2")
+                self.showLife.texture = SKTexture(imageNamed: "life2")
             }
             if life == 1 {
-                self.life2.texture = SKTexture(imageNamed: "life1")
+                self.showLife.texture = SKTexture(imageNamed: "life1")
             }
         }
     }
-    var life2: SKSpriteNode = SKSpriteNode(imageNamed: "life3")
+    var showLife: SKSpriteNode = SKSpriteNode(imageNamed: "life3")
     var isShooting: Double = 1
     var refire: Double = 1
     var shootingDelay: Double = 0.3
+    var enemyDuration: Double = 2.5
+    var enemySpawnTime: Double = 0.7 {
+        didSet {
+            resetupEnemy()
+        }
+    }
     var final: Bool = false
     var ulisses: SKSpriteNode = SKSpriteNode()
     var arms: [SKSpriteNode] = []
@@ -82,39 +88,6 @@ class GameScene: SKScene {
         if self.name == "game" {
             checkCollision()
             checkUlissesCollision()
-    //        checkScore()
-            checkGameOver()
-        }
-    }
-
-    func gameOver() {
-        self.view?.presentScene(self.gameOverScene)
-    }
-
-    func gameTouch(_ touches: Set<UITouch>) {
-        if self.isShooting == 1 {
-            for touch in touches {
-                createProjectile(touch)
-                self.isShooting = 0
-                self.refire = 1
-            }
-        }
-        if self.refire == 1 {
-            perform(#selector(enableShooting), with: nil, afterDelay: shootingDelay)
-            self.refire = 0
-        }
-    }
-
-    func offGametouchedButton(_ touchLocation: CGPoint, _ buttonName: String) {
-        let nodeAtPoint = atPoint(touchLocation)
-        if let touchedNode = nodeAtPoint as? SKSpriteNode {
-            if touchedNode.name?.starts(with: buttonName) == true {
-                if self.name == "over" {
-                    self.view?.presentScene(gameScene)
-                } else if self.name == "start" {
-                    self.view?.presentScene(gameScene)
-                }
-            }
         }
     }
 }

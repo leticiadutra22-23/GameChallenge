@@ -23,16 +23,18 @@ extension GameScene {
         animateBackground(background)
         addChild(background)
 
-        life2.position = CGPoint(x: 75, y: 775)
-        life2.size = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/16)
-        life2.zPosition = 2
-        addChild(life2)
+        showLife.position = CGPoint(x: 75, y: 775)
+        showLife.size = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/16)
+        showLife.zPosition = 2
+        addChild(showLife)
 
-        score2.position = CGPoint(x: 325, y: 765)
-        score2.text = "0"
-        score2.zPosition = 2
-        addChild(score2)
+        showScore.position = CGPoint(x: 325, y: 765)
+        showScore.text = "\(self.score)"
+        showScore.zPosition = 2
+        addChild(showScore)
 
+        let sound = SKAudioNode(fileNamed: "The Sirens Battle.WAV")
+        addChild(sound)
     }
 
     private func setupOverBackground() {
@@ -62,5 +64,11 @@ extension GameScene {
         startButton.size = CGSize(width: 236, height: 97)
         startButton.name = "startButton"
         addChild(startButton)
+
+        showScore.position = CGPoint(x: size.width/2, y: size.height/5.5)
+        showScore.text = "Highest Score: \(UserDefaults.standard.integer(forKey: "highestScore"))"
+        showScore.horizontalAlignmentMode = .center
+        showScore.zPosition = 2
+        addChild(showScore)
     }
 }
