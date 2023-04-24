@@ -17,7 +17,16 @@ class OnboardingScene: SKScene {
     let page3Node = SKSpriteNode(imageNamed: "onboarding3")
     
     override func didMove(to view: SKView) {
-        addPage(page1Node)
+        
+        // Verificar se o onboarding já foi concluído antes
+        let defaults = UserDefaults.standard
+        let onboardingCompleted = defaults.bool(forKey: "onboardingCompleted")
+        
+        if onboardingCompleted {
+            self.view?.presentScene(self.gameScene)
+        } else {
+            addPage(page1Node)
+        }
     }
     
     func addPage(_ pageNode: SKSpriteNode) {
@@ -28,7 +37,7 @@ class OnboardingScene: SKScene {
         addChild(nextButton)
         nextButton.position = CGPoint(x: frame.maxX - 60, y: frame.maxY - 100)
         nextButton.name = "nextButton"
-  
+        
     }
     
     func removeCurrentPage() {
@@ -54,6 +63,9 @@ class OnboardingScene: SKScene {
             addPage(page2Node)
         case 2:
             addPage(page3Node)
+            let defaults = UserDefaults.standard
+            defaults.set(true, forKey: "onboardingCompleted")
+            defaults.synchronize()
         default:
             break
         }
@@ -70,7 +82,7 @@ class OnboardingScene: SKScene {
                 if currentPageIndex < 2 {
                     showPage(currentPageIndex + 1)
                 } else {
-                    // onboarding completed, navigate to next screen
+                    
                     self.view?.presentScene(self.gameScene)
                     
                 }
@@ -78,3 +90,4 @@ class OnboardingScene: SKScene {
         }
     }
 }
+
