@@ -147,6 +147,13 @@
 			path = GameTextureAtlases;
 			sourceTree = "<group>";
 		};
+		AB81C51829F6A7B000E3B0AB /* OnboardingScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnboardingScene;
+			sourceTree = "<group>";
+		};
 		EE04E22229D1BB34001A7F62 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +177,7 @@
 		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
 			isa = PBXGroup;
 			children = (
+				AB81C51829F6A7B000E3B0AB /* OnboardingScene */,
 				EE3121D429ED938C00FA01C5 /* GameSound */,
 				AB81C4BE29E9720000E3B0AB /* Info.plist */,
 				EE80846B29E4487300302ABA /* GameApp */,
