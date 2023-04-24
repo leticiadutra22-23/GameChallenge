@@ -42,14 +42,20 @@ extension GameScene {
         background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-
         addChild(background)
 
-        let gameOverButton = SKSpriteNode(imageNamed: "startButton")
-        gameOverButton.position = CGPoint(x: size.width/2, y: size.height/3.5)
+        let gameOverButton = SKSpriteNode(imageNamed: "jogarNovamente")
+        gameOverButton.position = CGPoint(x: size.width/2, y: size.height/2.5)
         gameOverButton.size = CGSize(width: 236, height: 97)
-        gameOverButton.name = "startButton"
+        gameOverButton.name = "gameOver"
         addChild(gameOverButton)
+        
+        let backMenuButton = SKSpriteNode(imageNamed: "voltarMenu")
+        backMenuButton.position = CGPoint(x: size.width/2, y: size.height/2)
+        backMenuButton.size = CGSize(width: 236, height: 97)
+        backMenuButton.name = "voltarMenu"
+        addChild(backMenuButton)
+
     }
 
     private func setupStartBackground() {

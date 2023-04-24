@@ -5,7 +5,7 @@ import SwiftUI
 class GameScene: SKScene {
     var spawnProjectiles: [SKSpriteNode] = []
     var spawnLanes: [Double] = [200, 100, 300]
-    var showScore: SKLabelNode = SKLabelNode()
+    var showScore: SKLabelNode = SKLabelNode(fontNamed: "LLPixel")
     var score: Int = 0 {
         didSet {
             showScore.text = String(score)
@@ -21,6 +21,7 @@ class GameScene: SKScene {
             }
         }
     }
+    var impactGenerator: UIImpactFeedbackGenerator?
     var showLife: SKSpriteNode = SKSpriteNode(imageNamed: "life3")
     var isShooting: Double = 1
     var refire: Double = 1
@@ -49,6 +50,7 @@ class GameScene: SKScene {
         scene.scaleMode = .fill
         return scene
     }
+    
     var gameScene: GameScene {
         let scene = GameScene()
         scene.name = "game"
@@ -73,6 +75,8 @@ class GameScene: SKScene {
             guard let touch = touches.first else { return }
             let touchLocation = touch.location(in: self)
             offGametouchedButton(touchLocation, "startButton")
+            offGametouchedButton(touchLocation, "gameOver")
+            offGametouchedButton(touchLocation, "voltarMenu")
         }
     }
     

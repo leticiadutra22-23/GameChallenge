@@ -3,9 +3,8 @@ import SpriteKit
 
 struct ContentView: View {
 
-    var scene: GameScene {
-        let scene = GameScene()
-        scene.name = "start"
+    var scene: OnboardingScene {
+        let scene = OnboardingScene()
         scene.size = CGSize(width: 390, height: 844)
         scene.scaleMode = .fill
         return scene

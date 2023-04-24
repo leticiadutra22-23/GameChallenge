@@ -1,5 +1,7 @@
 import Foundation
 import SpriteKit
+import UIKit
+
 
 extension GameScene {
     func checkGameOver() {
@@ -55,6 +57,9 @@ extension GameScene {
                     CGRectInset(enemy.frame, 15, 15), arm.frame) {
                     self.projectileHitEnemy(enemy: enemy)
                     self.decrementLife()
+                    self.impactGenerator = UIImpactFeedbackGenerator(style: .light)
+                    self.impactGenerator?.prepare()
+                    self.impactGenerator?.impactOccurred()
                 }
             }
         }
@@ -93,7 +98,11 @@ extension GameScene {
         if let touchedNode = nodeAtPoint as? SKSpriteNode {
             if touchedNode.name?.starts(with: buttonName) == true {
                 if self.name == "over" {
-                    self.view?.presentScene(gameScene)
+                    if buttonName == "voltarMenu" {
+                        self.view?.presentScene(gameStartScene)
+                    } else {
+                        self.view?.presentScene(gameScene)
+                    }
                 } else if self.name == "start" {
                     self.view?.presentScene(gameScene)
                 }

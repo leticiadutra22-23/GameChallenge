@@ -17,6 +17,8 @@
 		AB81C4B929E5987700E3B0AB /* GameBackgroundTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4B829E5987700E3B0AB /* GameBackgroundTexture.swift */; };
 		AB81C4BB29E5A23100E3B0AB /* GameArm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4BA29E5A23100E3B0AB /* GameArm.swift */; };
 		AB81C4BD29E5A66300E3B0AB /* GameArmTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C4BC29E5A66300E3B0AB /* GameArmTextures.swift */; };
+		AB81C51A29F6A90C00E3B0AB /* OnboardingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81C51929F6A90C00E3B0AB /* OnboardingScene.swift */; };
+		AB81C51E29F6C31800E3B0AB /* LLPIXEL3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB81C51C29F6C2A600E3B0AB /* LLPIXEL3.ttf */; };
 		EE04E22F29D1BB34001A7F62 /* OdysseusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */; };
 		EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04E23029D1BB34001A7F62 /* ContentView.swift */; };
 		EE04E23329D1BB35001A7F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE04E23229D1BB35001A7F62 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		AB81C4BA29E5A23100E3B0AB /* GameArm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameArm.swift; sourceTree = "<group>"; };
 		AB81C4BC29E5A66300E3B0AB /* GameArmTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameArmTextures.swift; sourceTree = "<group>"; };
 		AB81C4BE29E9720000E3B0AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AB81C51929F6A90C00E3B0AB /* OnboardingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScene.swift; sourceTree = "<group>"; };
+		AB81C51C29F6C2A600E3B0AB /* LLPIXEL3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLPIXEL3.ttf; sourceTree = "<group>"; };
 		EE04E22B29D1BB34001A7F62 /* Odysseus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Odysseus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE04E22E29D1BB34001A7F62 /* OdysseusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdysseusApp.swift; sourceTree = "<group>"; };
 		EE04E23029D1BB34001A7F62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,8 +154,17 @@
 		AB81C51829F6A7B000E3B0AB /* OnboardingScene */ = {
 			isa = PBXGroup;
 			children = (
+				AB81C51929F6A90C00E3B0AB /* OnboardingScene.swift */,
 			);
 			path = OnboardingScene;
+			sourceTree = "<group>";
+		};
+		AB81C51B29F6C28F00E3B0AB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				AB81C51C29F6C2A600E3B0AB /* LLPIXEL3.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		EE04E22229D1BB34001A7F62 = {
@@ -177,6 +190,7 @@
 		EE04E22D29D1BB34001A7F62 /* Odysseus */ = {
 			isa = PBXGroup;
 			children = (
+				AB81C51B29F6C28F00E3B0AB /* Font */,
 				AB81C51829F6A7B000E3B0AB /* OnboardingScene */,
 				EE3121D429ED938C00FA01C5 /* GameSound */,
 				AB81C4BE29E9720000E3B0AB /* Info.plist */,
@@ -350,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE3121D629ED93A100FA01C5 /* The Sirens Battle.WAV in Resources */,
+				AB81C51E29F6C31800E3B0AB /* LLPIXEL3.ttf in Resources */,
 				EE04E23629D1BB35001A7F62 /* Preview Assets.xcassets in Resources */,
 				EE04E23329D1BB35001A7F62 /* Assets.xcassets in Resources */,
 			);
@@ -399,6 +414,7 @@
 			files = (
 				EE80846529E4369F00302ABA /* GameUlisses.swift in Sources */,
 				EE04E23B29D1BB35001A7F62 /* Odysseus.xcdatamodeld in Sources */,
+				AB81C51A29F6A90C00E3B0AB /* OnboardingScene.swift in Sources */,
 				AB81C4B129DDA66C00E3B0AB /* GameMechanic.swift in Sources */,
 				EE80846329E435A600302ABA /* GameUlissesTexture.swift in Sources */,
 				AB81C4BD29E5A66300E3B0AB /* GameArmTextures.swift in Sources */,
@@ -573,7 +589,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Odysseus/Preview Content\"";
-				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				DEVELOPMENT_TEAM = 7F3CTHW22L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Odysseus/Info.plist;
@@ -603,7 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Odysseus/Preview Content\"";
-				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				DEVELOPMENT_TEAM = 7F3CTHW22L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Odysseus/Info.plist;
