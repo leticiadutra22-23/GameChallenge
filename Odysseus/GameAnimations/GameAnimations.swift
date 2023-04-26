@@ -10,6 +10,11 @@ extension GameScene {
         let frameAction = SKAction.animate(with: projectileTexture.projectileFrames, timePerFrame: 0.18)
         projectile.run(SKAction.repeatForever(frameAction))
     }
+    func animateFlamesProjectile(_ projectile: SKSpriteNode) {
+        let projectileTexture = FlamesProjectile()
+        let frameAction = SKAction.animate(with: projectileTexture.flamesProjectileFrames, timePerFrame: 0.18)
+        projectile.run(SKAction.repeatForever(frameAction))
+    }
 
     func animateUlisses(_ ulisses: SKSpriteNode) {
         let ulissesTexture = Ulisses()
@@ -38,6 +43,12 @@ extension GameScene {
     func animateArm(_ arm: SKSpriteNode) {
         let armTexture = Arm()
         let frameAction = SKAction.animate(with: armTexture.armFrames, timePerFrame: 0.045)
+        arm.run(frameAction)
+    }
+    
+    func animateFinalArm(_ arm: SKSpriteNode) {
+        let armTexture = FinalArm()
+        let frameAction = SKAction.animate(with: armTexture.finalArmFrames, timePerFrame: 0.045)
         arm.run(frameAction)
     }
 }

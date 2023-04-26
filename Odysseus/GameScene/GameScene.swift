@@ -70,7 +70,15 @@ class GameScene: SKScene {
     
     var finalBatleScene: GameScene {
         let scene = GameScene(score: score)
-        scene.name = "level3"
+        scene.name = "finalBatle"
+        scene.size = CGSize(width: 390, height: 844)
+        scene.scaleMode = .fill
+        return scene
+    }
+    
+    var winnerScene: GameScene {
+        let scene = GameScene(score: score)
+        scene.name = "winner"
         scene.size = CGSize(width: 390, height: 844)
         scene.scaleMode = .fill
         return scene
@@ -104,6 +112,7 @@ class GameScene: SKScene {
             offGametouchedButton(touchLocation, "gameOver")
             offGametouchedButton(touchLocation, "voltarMenu")
             offGametouchedButton(touchLocation, "nextLevel")
+            offGametouchedButton(touchLocation, "finalBatle")
         }
     }
     

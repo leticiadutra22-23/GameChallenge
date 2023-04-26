@@ -68,7 +68,7 @@ extension GameScene {
     }
     
     func incrementScore() {
-        self.score += 50
+        self.score += 10
         checkScore()
     }
     
@@ -107,12 +107,17 @@ extension GameScene {
                         self.view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 0.5))
                         
                     }
-                } else if self.name == "start" {
+                } else if self.name == "winner" {
+                    self.view?.presentScene(gameStartScene, transition: SKTransition.fade(withDuration: 0.5))
+                    
+                }else if self.name == "start" {
                     self.view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 0.5))
                     
                 } else if self.name == "level2"{
-                    self.view?.presentScene(self.gameScene)
-                    //self.gameScene.score = 260
+                    self.view?.presentScene(gameScene)
+                    
+                } else if self.name == "finalBatle" {
+                    self.view?.presentScene(gameScene)
                 }
             }
         }

@@ -19,3 +19,18 @@ struct Arm {
                           armAtlas.textureNamed("canhao1")]
     }
 }
+
+struct FinalArm {
+    var finalArmAtlas: SKTextureAtlas
+    let finalArmFrames: [SKTexture]
+    
+    init() {
+        self.finalArmAtlas = SKTextureAtlas(named: "Arms")
+        self.finalArmFrames = [finalArmAtlas.textureNamed("canhaoFinal1"),
+                               finalArmAtlas.textureNamed("canhaoFinal2"),
+                               finalArmAtlas.textureNamed("canhaoFinal3"),
+                               finalArmAtlas.textureNamed("canhaoFinal4"),
+                               finalArmAtlas.textureNamed("canhaoFinal5"),
+                               finalArmAtlas.textureNamed("canhaoFinal6")]
+    }
+}

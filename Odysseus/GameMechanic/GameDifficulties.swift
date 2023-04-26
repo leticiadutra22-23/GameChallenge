@@ -23,6 +23,8 @@ extension GameScene {
             self.enemySpawnTime = 0.5
 
         case 1250:
+            self.view?.isPaused = true
+            self.view?.presentScene(self.finalBatleScene)
             self.enemyDuration = 1.5
             self.enemySpawnTime = 0.45
             self.shootingDelay = 0.2
@@ -31,6 +33,10 @@ extension GameScene {
             self.enemyDuration = 1.3
             self.enemySpawnTime = 0.4
             self.shootingDelay = 0.15
+            
+        case 10000:
+            self.view?.isPaused = true
+            self.view?.presentScene(self.winnerScene)
 
         default:
             break

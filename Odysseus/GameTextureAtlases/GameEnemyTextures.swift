@@ -18,10 +18,9 @@ struct Enemy2 {
     let enemyFrames: [SKTexture]
 
     init() {
-        self.enemyAtlas = SKTextureAtlas(named: "Ulisses")
-        self.enemyFrames = [enemyAtlas.textureNamed("ulisses1"),
-                            enemyAtlas.textureNamed("ulisses"),
-                            enemyAtlas.textureNamed("ulisses1")]
+        self.enemyAtlas = SKTextureAtlas(named: "Enemy")
+        self.enemyFrames = [enemyAtlas.textureNamed("lanca"),
+                            enemyAtlas.textureNamed("lanca")]
     }
 }
 

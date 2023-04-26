@@ -12,7 +12,13 @@ extension GameScene {
         } else if name == "level2" {
           setupNextLevelBackground()
             return false
-        } else {
+        } else if name == "finalBatle"{
+            setupFinalBatleBackground()
+            return false
+        }else if name == "winner" {
+            setupWinner()
+            return false
+        }else {
             setupStartBackground()
             return false
         }
@@ -99,10 +105,30 @@ extension GameScene {
     }
     
     private func setupFinalBatleBackground() {
-        let background = SKSpriteNode(imageNamed: "level2")
+        let background = SKSpriteNode(imageNamed: "finalBatle")
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         addChild(background)
+        
+        let nextLevel = SKSpriteNode(imageNamed: "proximoNivel")
+        nextLevel.position = CGPoint(x: size.width/2, y: size.height/3.5)
+        nextLevel.size = CGSize(width: 236, height: 97)
+        nextLevel.name = "finalBatle"
+        addChild(nextLevel)
+    }
+    
+    private func setupWinner() {
+        let background = SKSpriteNode(imageNamed: "vitoria")
+        background.position = CGPoint(x: size.width/2, y: size.height/2)
+        background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        addChild(background)
+        
+        let backMenuButton = SKSpriteNode(imageNamed: "voltarMenu")
+        backMenuButton.position = CGPoint(x: size.width/2, y: size.height/3.5)
+        backMenuButton.size = CGSize(width: 236, height: 97)
+        backMenuButton.name = "voltarMenu"
+        addChild(backMenuButton)
     }
 }

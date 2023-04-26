@@ -9,7 +9,7 @@ extension GameScene {
         enemy.size = CGSize(width: 84, height: 120)
         enemy.position = CGPoint(x: spawnLanes.randomElement()!, y: size.height + enemy.size.height/2)
         enemy.zPosition = 1
-        if final {
+        if gameScene.score >= 1250 {
             enemyMovement2(enemy)
         } else {
             enemyMovement(enemy)
