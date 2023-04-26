@@ -9,6 +9,9 @@ extension GameScene {
         } else if name == "over" {
             setupOverBackground()
             return false
+        } else if name == "level2" {
+          setupNextLevelBackground()
+            return false
         } else {
             setupStartBackground()
             return false
@@ -76,5 +79,30 @@ extension GameScene {
         showScore.horizontalAlignmentMode = .center
         showScore.zPosition = 2
         addChild(showScore)
+    }
+    
+    private func setupNextLevelBackground() {
+        let background = SKSpriteNode(imageNamed: "level2")
+        background.position = CGPoint(x: size.width/2, y: size.height/2)
+        background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        addChild(background)
+        
+        let nextLevel = SKSpriteNode(imageNamed: "proximoNivel")
+        nextLevel.position = CGPoint(x: size.width/2, y: size.height/3.5)
+        nextLevel.size = CGSize(width: 236, height: 97)
+        nextLevel.name = "nextLevel"
+        addChild(nextLevel)
+        
+        self.view?.isPaused = true
+        
+    }
+    
+    private func setupFinalBatleBackground() {
+        let background = SKSpriteNode(imageNamed: "level2")
+        background.position = CGPoint(x: size.width/2, y: size.height/2)
+        background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        addChild(background)
     }
 }

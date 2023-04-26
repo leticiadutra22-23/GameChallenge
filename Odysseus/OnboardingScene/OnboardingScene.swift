@@ -4,7 +4,7 @@ import SpriteKit
 class OnboardingScene: SKScene {
     
     var gameStartScene: GameScene {
-        let scene = GameScene()
+        let scene = GameScene(score: 0)
         scene.name = "start"
         scene.size = CGSize(width: 390, height: 844)
         scene.scaleMode = .aspectFit
@@ -24,7 +24,7 @@ class OnboardingScene: SKScene {
         let onboardingCompleted = defaults.bool(forKey: "onboardingCompleted")
         
         if onboardingCompleted {
-            self.view?.presentScene(self.gameStartScene)
+            self.view?.presentScene(self.gameStartScene, transition: SKTransition.fade(withDuration: 0.5))
         } else {
             addPage(page1Node)
         }
@@ -84,7 +84,7 @@ class OnboardingScene: SKScene {
                     showPage(currentPageIndex + 1)
                 } else {
                     
-                    self.view?.presentScene(self.gameStartScene)
+                    self.view?.presentScene(self.gameStartScene, transition: SKTransition.fade(withDuration: 0.5))
                     
                 }
             }

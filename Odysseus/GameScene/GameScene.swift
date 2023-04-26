@@ -2,6 +2,7 @@ import Foundation
 import SpriteKit
 import SwiftUI
 
+
 class GameScene: SKScene {
     var spawnProjectiles: [SKSpriteNode] = []
     var spawnLanes: [Double] = [200, 100, 300]
@@ -35,16 +36,16 @@ class GameScene: SKScene {
     var final: Bool = false
     var ulisses: SKSpriteNode = SKSpriteNode()
     var arms: [SKSpriteNode] = []
-
+    
     var gameOverScene: GameScene {
-        let scene = GameScene()
+        let scene = GameScene(score: score)
         scene.name = "over"
         scene.size = CGSize(width: 390, height: 844)
         scene.scaleMode = .fill
         return scene
     }
     var gameStartScene: GameScene {
-        let scene = GameScene()
+        let scene = GameScene(score: score)
         scene.name = "start"
         scene.size = CGSize(width: 390, height: 844)
         scene.scaleMode = .fill
@@ -52,13 +53,38 @@ class GameScene: SKScene {
     }
     
     var gameScene: GameScene {
-        let scene = GameScene()
+        let scene = GameScene(score: score)
         scene.name = "game"
         scene.size = CGSize(width: 390, height: 844)
         scene.scaleMode = .fill
         return scene
     }
-
+    
+    var nextLevelScene: GameScene {
+        let scene = GameScene(score: score)
+        scene.name = "level2"
+        scene.size = CGSize(width: 390, height: 844)
+        scene.scaleMode = .fill
+        return scene
+    }
+    
+    var finalBatleScene: GameScene {
+        let scene = GameScene(score: score)
+        scene.name = "level3"
+        scene.size = CGSize(width: 390, height: 844)
+        scene.scaleMode = .fill
+        return scene
+    }
+    
+    init(score: Int) {
+            self.score = score
+            super.init(size: CGSize(width: 390, height: 844))
+        }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     override func didMove(to view: SKView) {
         if setupBackground(self.name) {
@@ -77,6 +103,7 @@ class GameScene: SKScene {
             offGametouchedButton(touchLocation, "startButton")
             offGametouchedButton(touchLocation, "gameOver")
             offGametouchedButton(touchLocation, "voltarMenu")
+            offGametouchedButton(touchLocation, "nextLevel")
         }
     }
     
@@ -87,7 +114,7 @@ class GameScene: SKScene {
             }
         }
     }
-
+    
     override func didEvaluateActions() {
         if self.name == "game" {
             checkCollision()

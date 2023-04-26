@@ -7,12 +7,14 @@ extension GameScene {
         case 250:
             self.enemyDuration = 2.3
             self.enemySpawnTime = 0.65
-
+            
         case 500:
             self.enemyDuration = 2.1
             self.enemySpawnTime = 0.60
 
         case 750:
+            self.view?.isPaused = true
+            self.view?.presentScene(self.nextLevelScene)
             self.enemyDuration = 1.9
             self.enemySpawnTime = 0.55
 
