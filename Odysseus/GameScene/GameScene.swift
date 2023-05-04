@@ -5,7 +5,7 @@ import SwiftUI
 
 class GameScene: SKScene {
     var spawnProjectiles: [SKSpriteNode] = []
-    var spawnLanes: [Double] = [200, 100, 300]
+    var spawnLanes: [Double] = [133, 266]
     var showScore: SKLabelNode = SKLabelNode(fontNamed: "LLPixel")
     var score: Int = 0 {
         didSet {
