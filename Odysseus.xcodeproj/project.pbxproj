@@ -170,6 +170,7 @@
 		EE04E22229D1BB34001A7F62 = {
 			isa = PBXGroup;
 			children = (
+				EEA5AA092A03F427002FDBC5 /* AI */,
 				EE04E22D29D1BB34001A7F62 /* Odysseus */,
 				EE04E24329D1BB35001A7F62 /* OdysseusTests */,
 				EE04E24D29D1BB35001A7F62 /* OdysseusUITests */,
@@ -256,6 +257,13 @@
 				EE04E23029D1BB34001A7F62 /* ContentView.swift */,
 			);
 			path = GameApp;
+			sourceTree = "<group>";
+		};
+		EEA5AA092A03F427002FDBC5 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
