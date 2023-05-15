@@ -16,5 +16,6 @@ struct ContentView: View {
             .ignoresSafeArea()
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             .navigationBarBackButtonHidden()
+            .preferredColorScheme(.dark)
     }
 }

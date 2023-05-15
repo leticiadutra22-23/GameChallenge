@@ -8,6 +8,7 @@ class GameScene: SKScene {
     var spawnProjectiles: [SKSpriteNode] = []
     var spawnLanes: [Double] = [100, 200, 300]
     var showScore: SKLabelNode = SKLabelNode(fontNamed: "LLPixel")
+    var showScore2: SKLabelNode = SKLabelNode(fontNamed: "LLPixel")
     var accuracy: Int = 0 {
         didSet {
                 showScore.text = String("A:\(accuracy*5)%")
@@ -23,7 +24,7 @@ class GameScene: SKScene {
     }
     var score: Int = 0 {
         didSet {
-//            showScore.text = String(score)
+            showScore2.text = String(score)
         }
     }
     var life: Int = 3 {
@@ -102,8 +103,8 @@ class GameScene: SKScene {
     var randomPosition: Double = 0
     let learningRate: Double = 0.001
     let bias: Double = -1.0
-    var weights1: [Double] = [-0.2, 0.6]
-    var weights2: [Double] = [0.8, -0.4]
+    var weights1: [Double] = [0.0, 0.0]
+    var weights2: [Double] = [0.0, 0.0]
     // --------------------------
 
     init(score: Int) {
@@ -126,11 +127,11 @@ class GameScene: SKScene {
             self.weights1[1] = defaults.double(forKey: "weight11")
             self.weights2[0] = defaults.double(forKey: "weight20")
             self.weights2[1] = defaults.double(forKey: "weight21")
-            print("DidIT")
+            print("Loaded")
         } else {
-            self.weights1 = [-0.2, 0.1]
-            self.weights2 = [0.9, -0.4]
-            print("BEGIN")
+            self.weights1 = [-0.2, 1.8]
+            self.weights2 = [0.2, -0.6]
+            print("Started")
             defaults.set(true, forKey: "firstTimeTraining")
         }
 

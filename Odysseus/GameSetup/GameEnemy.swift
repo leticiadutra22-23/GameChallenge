@@ -26,7 +26,7 @@ extension GameScene {
         if self.randomPosition == 300 {
             savedValue = Double.random(in: 266 ... 400).rounded(.towardZero)
         }
-        createAiProjectile( sum([-1.0, savedValue], &weights1, &weights2, learningRate))
+        createAiProjectile( sum([bias, savedValue], &weights1, &weights2, learningRate))
     }
 }
 

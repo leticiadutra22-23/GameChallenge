@@ -37,10 +37,15 @@ extension GameScene {
         showLife.zPosition = 2
         addChild(showLife)
 
-        showScore.position = CGPoint(x: 325, y: 765)
-        showScore.text = "\(self.score)"
+        showScore.position = CGPoint(x: 315, y: 765)
+        showScore.text = "Acc: \(self.accuracy)%"
         showScore.zPosition = 2
         addChild(showScore)
+
+        showScore2.position = CGPoint(x: 305, y: 725)
+        showScore2.text = "Score: \(self.score)"
+        showScore2.zPosition = 2
+        addChild(showScore2)
 
         let sound = SKAudioNode(fileNamed: "The Sirens Battle.WAV")
         addChild(sound)

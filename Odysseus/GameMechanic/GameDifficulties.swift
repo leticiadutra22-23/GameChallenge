@@ -13,8 +13,8 @@ extension GameScene {
             self.enemySpawnTime = 0.60
 
         case 750:
-            self.view?.isPaused = true
-            self.view?.presentScene(self.nextLevelScene)
+//            self.view?.isPaused = true
+//            self.view?.presentScene(self.nextLevelScene)
             self.enemyDuration = 1.9
             self.enemySpawnTime = 0.55
 
@@ -23,8 +23,8 @@ extension GameScene {
             self.enemySpawnTime = 0.5
 
         case 1250:
-            self.view?.isPaused = true
-            self.view?.presentScene(self.finalBatleScene)
+//            self.view?.isPaused = true
+//            self.view?.presentScene(self.finalBatleScene)
             self.enemyDuration = 1.5
             self.enemySpawnTime = 0.45
             self.shootingDelay = 0.2
@@ -37,7 +37,11 @@ extension GameScene {
         case 10000:
             self.view?.isPaused = true
             self.view?.presentScene(self.winnerScene)
-
+            UserDefaults.standard.set(self.score, forKey: "lastScore")
+            if highestScore() { // remove later to update gameOver Scene.
+                print(UserDefaults.standard.integer(forKey: "lastScore"))
+                print(UserDefaults.standard.integer(forKey: "highestScore"))
+            }
         default:
             break
         }
