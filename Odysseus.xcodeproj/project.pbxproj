@@ -33,6 +33,7 @@
 		EE80846329E435A600302ABA /* GameUlissesTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846229E435A600302ABA /* GameUlissesTexture.swift */; };
 		EE80846529E4369F00302ABA /* GameUlisses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846429E4369F00302ABA /* GameUlisses.swift */; };
 		EE80846829E43EFF00302ABA /* GameAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80846729E43EFF00302ABA /* GameAnimations.swift */; };
+		EE8313C72A12941C00A8B88D /* GameBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8313C62A12941C00A8B88D /* GameBot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		EE80846229E435A600302ABA /* GameUlissesTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUlissesTexture.swift; sourceTree = "<group>"; };
 		EE80846429E4369F00302ABA /* GameUlisses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUlisses.swift; sourceTree = "<group>"; };
 		EE80846729E43EFF00302ABA /* GameAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnimations.swift; sourceTree = "<group>"; };
+		EE8313C62A12941C00A8B88D /* GameBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 		EEA5AA092A03F427002FDBC5 /* AI */ = {
 			isa = PBXGroup;
 			children = (
+				EE8313C62A12941C00A8B88D /* GameBot.swift */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				AB81C4AC29DDA48E00E3B0AB /* GameEnemy.swift in Sources */,
 				EE04E23129D1BB34001A7F62 /* ContentView.swift in Sources */,
 				AB81C4B629DDBA3700E3B0AB /* GameProjectileTextures.swift in Sources */,
+				EE8313C72A12941C00A8B88D /* GameBot.swift in Sources */,
 				AB81C4B929E5987700E3B0AB /* GameBackgroundTexture.swift in Sources */,
 				AB81C4AA29DDA10000E3B0AB /* GameProjectile.swift in Sources */,
 				AB81C4B429DDB36000E3B0AB /* GameEnemyTextures.swift in Sources */,

@@ -4,12 +4,26 @@ import SwiftUI
 
 
 class GameScene: SKScene {
+
     var spawnProjectiles: [SKSpriteNode] = []
-    var spawnLanes: [Double] = [133, 266]
+    var spawnLanes: [Double] = [100, 200, 300]
     var showScore: SKLabelNode = SKLabelNode(fontNamed: "LLPixel")
+    var accuracy: Int = 0 {
+        didSet {
+                showScore.text = String("A:\(accuracy*5)%")
+        }
+    }
+    var accList: [Int] = [] {
+        didSet {
+            if accList.count > 20 {
+                accList.remove(at: 0)
+                accuracy = accList.filter({$0 > 0}).count
+            }
+        }
+    }
     var score: Int = 0 {
         didSet {
-            showScore.text = String(score)
+//            showScore.text = String(score)
         }
     }
     var life: Int = 3 {
@@ -36,7 +50,7 @@ class GameScene: SKScene {
     var final: Bool = false
     var ulisses: SKSpriteNode = SKSpriteNode()
     var arms: [SKSpriteNode] = []
-    
+
     var gameOverScene: GameScene {
         let scene = GameScene(score: score)
         scene.name = "over"
@@ -51,7 +65,7 @@ class GameScene: SKScene {
         scene.scaleMode = .fill
         return scene
     }
-    
+
     var gameScene: GameScene {
         let scene = GameScene(score: score)
         scene.name = "game"
@@ -59,7 +73,7 @@ class GameScene: SKScene {
         scene.scaleMode = .fill
         return scene
     }
-    
+
     var nextLevelScene: GameScene {
         let scene = GameScene(score: score)
         scene.name = "level2"
@@ -67,7 +81,7 @@ class GameScene: SKScene {
         scene.scaleMode = .fill
         return scene
     }
-    
+
     var finalBatleScene: GameScene {
         let scene = GameScene(score: score)
         scene.name = "finalBatle"
@@ -75,7 +89,7 @@ class GameScene: SKScene {
         scene.scaleMode = .fill
         return scene
     }
-    
+
     var winnerScene: GameScene {
         let scene = GameScene(score: score)
         scene.name = "winner"
@@ -83,28 +97,55 @@ class GameScene: SKScene {
         scene.scaleMode = .fill
         return scene
     }
-    
+
+    // MARK: AI-related variables.
+    var randomPosition: Double = 0
+    let learningRate: Double = 0.001
+    let bias: Double = -1.0
+    var weights1: [Double] = [-0.2, 0.6]
+    var weights2: [Double] = [0.8, -0.4]
+    // --------------------------
+
     init(score: Int) {
             self.score = score
             super.init(size: CGSize(width: 390, height: 844))
         }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
+
+
     override func didMove(to view: SKView) {
+
+        let defaults = UserDefaults.standard
+        let aiCompleted = defaults.bool(forKey: "firstTimeTraining")
+
+        if aiCompleted {
+            self.weights1[0] = defaults.double(forKey: "weight10")
+            self.weights1[1] = defaults.double(forKey: "weight11")
+            self.weights2[0] = defaults.double(forKey: "weight20")
+            self.weights2[1] = defaults.double(forKey: "weight21")
+            print("DidIT")
+        } else {
+            self.weights1 = [-0.2, 0.1]
+            self.weights2 = [0.9, -0.4]
+            print("BEGIN")
+            defaults.set(true, forKey: "firstTimeTraining")
+        }
+
         if setupBackground(self.name) {
             self.ulisses = setupUlisses()
             self.arms = setupArm()
             setupEnemy()
         }
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.name == "game" {
-            gameTouch(touches)
+//            gameTouch(touches)
+            self.name = "start"
+            self.view?.presentScene(gameStartScene, transition: SKTransition.fade(withDuration: 0.5))
         } else {
             guard let touch = touches.first else { return }
             let touchLocation = touch.location(in: self)
@@ -115,7 +156,7 @@ class GameScene: SKScene {
             offGametouchedButton(touchLocation, "finalBatle")
         }
     }
-    
+
     override func update(_ currentTime: TimeInterval) {
         if self.name == "game" {
             for projectile in spawnProjectiles {
@@ -123,7 +164,7 @@ class GameScene: SKScene {
             }
         }
     }
-    
+
     override func didEvaluateActions() {
         if self.name == "game" {
             checkCollision()
