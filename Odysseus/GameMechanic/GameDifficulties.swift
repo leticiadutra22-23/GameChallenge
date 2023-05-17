@@ -42,6 +42,9 @@ extension GameScene {
                 print(UserDefaults.standard.integer(forKey: "lastScore"))
                 print(UserDefaults.standard.integer(forKey: "highestScore"))
             }
+            self.score = 0
+            self.life = 3
+            saveSetupWeights()
         default:
             break
         }

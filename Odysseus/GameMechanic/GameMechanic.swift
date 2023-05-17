@@ -112,6 +112,7 @@ extension GameScene {
                     self.view?.presentScene(gameStartScene, transition: SKTransition.fade(withDuration: 0.5))
 
                 }else if self.name == "start" {
+                    self.score = 0
                     self.view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 0.5))
 
                 } else if self.name == "level2"{

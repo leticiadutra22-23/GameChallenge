@@ -47,8 +47,8 @@ extension GameScene {
         showScore2.zPosition = 2
         addChild(showScore2)
 
-        let sound = SKAudioNode(fileNamed: "The Sirens Battle.WAV")
-        addChild(sound)
+//        let sound = SKAudioNode(fileNamed: "The Sirens Battle.WAV")
+//        addChild(sound)
     }
 
     private func setupOverBackground() {
