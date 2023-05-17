@@ -11,11 +11,13 @@ extension GameScene {
         var savedValue: Double = 0.0
         enemy.position = CGPoint(x: self.randomPosition, y: size.height + enemy.size.height/2)
         enemy.zPosition = 1
-        if gameScene.score >= 1250 {
-            enemyMovement2(enemy)
-        } else {
-            enemyMovement(enemy)
-        }
+        enemyMovement(enemy)
+
+//        if gameScene.score >= 1250 {
+//            enemyMovement2(enemy)
+//        } else {
+//            enemyMovement(enemy)
+//        }
         addChild(enemy)
         if self.randomPosition == 100 {
             savedValue = Double.random(in: 1 ... 133).rounded(.towardZero)

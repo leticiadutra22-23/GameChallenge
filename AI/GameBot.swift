@@ -40,7 +40,7 @@ extension GameScene {
                 for i in 0 ..< weights1.count {
                     weights1[i] = weights1[i] + learningRate * error * input[1]
                 }
-                accList.append(0)
+                accuracy += 1
             } else {
                 var neuron2 = Perceptron(weights: [weights2[0], weights2[1]], threshold: 266.0)
 
@@ -54,9 +54,7 @@ extension GameScene {
                         for i in 0 ..< weights2.count {
                             weights2[i] = weights2[i] + learningRate * error2 * input[1]
                         }
-                        accList.append(0)
-                    } else {
-                        accList.append(1)
+                        accuracy += 1
                     }
                 } else {
                     if second != 0.0 {
@@ -64,9 +62,7 @@ extension GameScene {
                         for i in 0 ..< weights2.count {
                             weights2[i] = weights2[i] + learningRate * error2 * input[1]
                         }
-                        accList.append(0)
-                    } else {
-                        accList.append(1)
+                        accuracy += 1
                     }
                 }
             }
@@ -76,9 +72,7 @@ extension GameScene {
                 for i in 0 ..< weights1.count {
                     weights1[i] = weights1[i] + learningRate * error * input[1]
                 }
-                accList.append(0)
-            } else {
-                accList.append(1)
+                accuracy += 1
             }
         }
         return result

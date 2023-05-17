@@ -11,20 +11,20 @@ class GameScene: SKScene {
     var showScore2: SKLabelNode = SKLabelNode(fontNamed: "LLPixel")
     var accuracy: Int = 0 {
         didSet {
-                showScore.text = String("A:\(accuracy*5)%")
+                showScore.text = "E: \(accuracy)"
         }
     }
-    var accList: [Int] = [] {
-        didSet {
-            if accList.count > 20 {
-                accList.remove(at: 0)
-                accuracy = accList.filter({$0 > 0}).count
-            }
-        }
-    }
+//    var accList: [Int] = [] {
+//        didSet {
+//            if accList.count > 20 {
+//                accList.remove(at: 0)
+//                accuracy = accList.filter({$0 > 0}).count
+//            }
+//        }
+//    }
     var score: Int = 0 {
         didSet {
-            showScore2.text = String(score)
+            showScore2.text = "A: \(score)"
         }
     }
     var life: Int = 3 {
@@ -42,8 +42,8 @@ class GameScene: SKScene {
     var isShooting: Double = 1
     var refire: Double = 1
     var shootingDelay: Double = 0.3
-    var enemyDuration: Double = 2.5
-    var enemySpawnTime: Double = 0.7 {
+    var enemyDuration: Double = 0.5
+    var enemySpawnTime: Double = 0.2 {
         didSet {
             resetupEnemy()
         }
@@ -146,6 +146,18 @@ class GameScene: SKScene {
         if self.name == "game" {
 //            gameTouch(touches)
             self.name = "start"
+            let value = accuracy+score
+            print(value)
+            let stackedValue = Int((score*100)/value)
+            print(stackedValue)
+            UserDefaults.standard.set(stackedValue, forKey: "highestScore")
+//            if highestScore() { // remove later to update gameOver Scene.
+//                print(UserDefaults.standard.integer(forKey: "lastScore"))
+//                print(UserDefaults.standard.integer(forKey: "highestScore"))
+//            }
+            self.score = 0
+            self.accuracy = 0
+            saveSetupWeights()
             self.view?.presentScene(gameStartScene, transition: SKTransition.fade(withDuration: 0.5))
         } else {
             guard let touch = touches.first else { return }

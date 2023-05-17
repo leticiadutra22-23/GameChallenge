@@ -25,7 +25,7 @@ extension GameScene {
     }
 
     func highestScore() -> Bool {
-        if UserDefaults.standard.integer(forKey: "lastScore") > UserDefaults.standard.integer(forKey: "highestScore") {
+        if UserDefaults.standard.double(forKey: "lastScore") > UserDefaults.standard.double(forKey: "highestScore") {
             UserDefaults.standard.set(UserDefaults.standard.integer(forKey: "lastScore"), forKey: "highestScore")
             return true
         }
@@ -59,7 +59,7 @@ extension GameScene {
                 if CGRectIntersectsRect(
                     CGRectInset(enemy.frame, 15, 15), arm.frame) {
                     self.projectileHitEnemy(enemy: enemy)
-                    self.decrementLife()
+//                    self.decrementLife()
                     self.impactGenerator = UIImpactFeedbackGenerator(style: .light)
                     self.impactGenerator?.prepare()
                     self.impactGenerator?.impactOccurred()
@@ -69,8 +69,8 @@ extension GameScene {
     }
 
     func incrementScore() {
-        self.score += 10
-        checkScore()
+        self.score += 1
+//        checkScore()
     }
 
     func decrementLife() {
@@ -113,6 +113,7 @@ extension GameScene {
 
                 }else if self.name == "start" {
                     self.score = 0
+                    self.accuracy = 0
                     self.view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 0.5))
 
                 } else if self.name == "level2"{

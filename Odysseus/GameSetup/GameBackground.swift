@@ -38,12 +38,12 @@ extension GameScene {
         addChild(showLife)
 
         showScore.position = CGPoint(x: 315, y: 765)
-        showScore.text = "Acc: \(self.accuracy)%"
+        showScore.text = "E: \(self.accuracy)"
         showScore.zPosition = 2
         addChild(showScore)
 
         showScore2.position = CGPoint(x: 305, y: 725)
-        showScore2.text = "Score: \(self.score)"
+        showScore2.text = "A: \(self.score)"
         showScore2.zPosition = 2
         addChild(showScore2)
 
@@ -86,7 +86,7 @@ extension GameScene {
         addChild(startButton)
 
         showScore.position = CGPoint(x: size.width/2, y: size.height/5.5)
-        showScore.text = "Highest Score: \(UserDefaults.standard.integer(forKey: "highestScore"))"
+        showScore.text = "Accuracy: \(UserDefaults.standard.integer(forKey: "highestScore"))%"
         showScore.horizontalAlignmentMode = .center
         showScore.zPosition = 2
         addChild(showScore)
