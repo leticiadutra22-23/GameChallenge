@@ -32,20 +32,25 @@ extension GameScene {
         animateBackground(background)
         addChild(background)
 
-        showLife.position = CGPoint(x: 75, y: 775)
-        showLife.size = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/16)
-        showLife.zPosition = 2
-        addChild(showLife)
+//        showLife.position = CGPoint(x: 75, y: 775)
+//        showLife.size = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/16)
+//        showLife.zPosition = 2
+//        addChild(showLife)
 
-        showScore.position = CGPoint(x: 315, y: 765)
-        showScore.text = "E: \(self.accuracy)"
+        showScore.position = CGPoint(x: 305, y: 685)
+        showScore.text = "Miss: \(self.accuracy)"
         showScore.zPosition = 2
         addChild(showScore)
 
         showScore2.position = CGPoint(x: 305, y: 725)
-        showScore2.text = "A: \(self.score)"
+        showScore2.text = "Hit: \(self.score)"
         showScore2.zPosition = 2
         addChild(showScore2)
+
+        showScore3.position = CGPoint(x: 305, y: 765)
+        showScore3.text = "Acc: \(self.percent)%"
+        showScore3.zPosition = 2
+        addChild(showScore3)
 
 //        let sound = SKAudioNode(fileNamed: "The Sirens Battle.WAV")
 //        addChild(sound)

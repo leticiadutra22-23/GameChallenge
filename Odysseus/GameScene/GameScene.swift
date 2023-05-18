@@ -9,24 +9,29 @@ class GameScene: SKScene {
     var spawnLanes: [Double] = [100, 200, 300]
     var showScore: SKLabelNode = SKLabelNode(fontNamed: "LLPixel")
     var showScore2: SKLabelNode = SKLabelNode(fontNamed: "LLPixel")
+    var showScore3: SKLabelNode = SKLabelNode(fontNamed: "LLPixel")
+    var percent: Int = 0 {
+        didSet {
+            showScore3.text = "Acc: \(percent)%"
+        }
+    }
+    var scoList: [Int] = []
     var accuracy: Int = 0 {
         didSet {
-                showScore.text = "E: \(accuracy)"
+            showScore.text = "Miss: \(accuracy)"
+            scoList.append(-1)
+            updateScoListAndPercent(verification: accuracy != 0)
         }
     }
-//    var accList: [Int] = [] {
-//        didSet {
-//            if accList.count > 20 {
-//                accList.remove(at: 0)
-//                accuracy = accList.filter({$0 > 0}).count
-//            }
-//        }
-//    }
+
     var score: Int = 0 {
         didSet {
-            showScore2.text = "A: \(score)"
+            showScore2.text = "Hit: \(score)"
+            scoList.append(1)
+            updateScoListAndPercent(verification: score != 0)
         }
     }
+
     var life: Int = 3 {
         didSet {
             if life == 2 {
@@ -37,6 +42,7 @@ class GameScene: SKScene {
             }
         }
     }
+
     var impactGenerator: UIImpactFeedbackGenerator?
     var showLife: SKSpriteNode = SKSpriteNode(imageNamed: "life3")
     var isShooting: Double = 1
@@ -48,6 +54,7 @@ class GameScene: SKScene {
             resetupEnemy()
         }
     }
+
     var final: Bool = false
     var ulisses: SKSpriteNode = SKSpriteNode()
     var arms: [SKSpriteNode] = []
@@ -182,6 +189,16 @@ class GameScene: SKScene {
         if self.name == "game" {
             checkCollision()
             checkUlissesCollision()
+        }
+    }
+
+    // MARK: - Utils
+    func updateScoListAndPercent(verification: Bool) {
+        if scoList.count > 100 {
+            scoList.remove(at: 0)
+        }
+        if verification {
+            percent = (100*scoList.filter({$0 > 0}).count)/(scoList.count)
         }
     }
 }
